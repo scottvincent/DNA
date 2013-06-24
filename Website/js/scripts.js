@@ -12,5 +12,29 @@
         );
         document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
       } 
-     
+
+// Gallery
+  $('#dna-Gallery').isotope({
+    // options
+    itemSelector : '.item',
+    resizeable: false,
+    animationEngine : 'best-available',
+    animationOptions: {
+     duration: 750,
+     easing: 'linear',
+     queue: false,
+   },
+    masonryHorizontal: {
+      rowHeight: 200,
+    }
+  });
+
 })();
+$(window).resize(function(){
+  $('#dna-Gallery').isotope({
+    // update columnWidth to a percentage of container width
+    masonryHorizontal: { 
+      columnWidth: 200,
+    }
+  });
+});

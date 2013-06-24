@@ -4,3 +4,13 @@
 .navbar-brand{padding:0 15px;color:black;}.navbar-brand img{height:50px;padding:0;margin-right:5px;}
 .navbar-brand:hover{color:black;background:rgba(0, 0, 0, 0.1);}
 .navbar-toggle{top:1px;}
+.dna-SpaceImg{background:url('../img/SpaceImg.jpg') center no-repeat;background-size:cover;}
+.dna-CurrentExpo{padding:100px 0;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;}
+.dna-CurrentExpo div{font-size:50px;background:black;padding:5px;line-height:60px;display:inline-block;}
+.dna-NextEvent{height:100%;display:inline-block;vertical-align:bottom;}
+.dna-EventCard{min-height:200px;background:#666;margin:5px;padding:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;vertical-align:bottom;text-align:center;}.dna-EventCard .heading{color:#000000;font-weight:700;font-size:16px;text-transform:uppercase;}
+.dna-EventCard .title{color:white;font-weight:600;font-size:22px;line-height:26px;}
+.dna-EventCard img{max-height:100px;max-width:100px;display:block;margin:5px auto;}
+.dna-BlackBG{background:black;}
+#dna-Gallery{height:500px;width:100%;padding:5px 0;}#dna-Gallery .item{max-width:20%;padding:5px;}#dna-Gallery .item img{max-width:100%;}
+@media (min-width:768px){.dna-CurrentExpo{padding:200px 0;}}

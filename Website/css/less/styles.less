@@ -3,6 +3,8 @@
 @import "variables.less";
 @import "mixins.less";
 
+//Navbar
+
 .navbar{
     margin-bottom:0;
 }
@@ -20,5 +22,88 @@
     }
 }
 .navbar-toggle{
-    top: 1px;
+    top: 1px; // Default is 10px
 }
+
+//Hero Unit
+
+.dna-SpaceImg{
+    background: url('../img/SpaceImg.jpg') center no-repeat;
+    background-size: cover;
+}
+.dna-CurrentExpo{
+    padding: 100px 0; 
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    & span{
+        font-size: 20px;
+        background: black;
+        padding: 0 5px;
+    }
+    & div{
+        font-size: 50px;
+        background: black;
+        padding: 5px;
+        line-height: 60px;
+        display: inline-block;
+    }
+}
+.dna-NextEvent{
+    height: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.dna-EventCard{
+    min-height: 200px;
+    background: #666;
+    margin: 5px;
+    padding: 10px;
+    .box-sizing(border-box);
+    position: relative;
+    vertical-align: bottom;
+    text-align: center;
+    & .heading{
+        color: rgba(0,0,0,1);
+        font-weight: 700;
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+    & .title{
+        color: white;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+    }
+    & img{
+        max-height: 100px;
+        max-width: 100px;
+        display: block;
+        margin: 5px auto;
+    }
+}
+.dna-BlackBG{
+    background: black;
+}
+#dna-Gallery{
+    height: 500px;   
+    width: 100%;
+    padding: 5px 0;
+    & .item {
+        max-width: 20%;
+        padding: 5px;
+        & img{
+            max-width: 100%;
+        }
+    }
+}
+@media (min-width: @screen-tablet){
+    .dna-CurrentExpo{
+        padding: 200px 0;
+    }
+}
+
+
+
+
