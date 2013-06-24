@@ -1,2 +1,6 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
 
+.navbar{margin-bottom:0;}
+.navbar-brand{padding:0 15px;color:black;}.navbar-brand img{height:50px;padding:0;margin-right:5px;}
+.navbar-brand:hover{color:black;background:rgba(0, 0, 0, 0.1);}
+.navbar-toggle{top:1px;}

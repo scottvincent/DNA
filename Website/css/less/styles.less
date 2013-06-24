@@ -2,3 +2,23 @@
 
 @import "variables.less";
 @import "mixins.less";
+
+.navbar{
+    margin-bottom:0;
+}
+.navbar-brand {
+    padding: 0 15px;
+    color: black;
+    & img {
+        height: @navbar-height;
+        padding: 0;
+        margin-right: 5px;
+    }
+    &:hover{
+        color: black;
+        background: rgba(0,0,0,0.1);
+    }
+}
+.navbar-toggle{
+    top: 1px;
+}
