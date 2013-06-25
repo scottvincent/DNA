@@ -4,6 +4,7 @@
 .navbar-brand{padding:0 15px;color:black;}.navbar-brand img{height:50px;padding:0;margin-right:5px;}
 .navbar-brand:hover{color:black;background:rgba(0, 0, 0, 0.1);}
 .navbar-toggle{top:1px;}
+.navbar-nav.dna-Social li a{padding-top:10.5px;padding-bottom:10.5px;}
 .dna-SpaceImg{background:url('../img/SpaceImg.jpg') center no-repeat;background-size:cover;}
 .dna-CurrentExpo{padding:100px 0;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;}
 .dna-CurrentExpo div{font-size:50px;background:black;padding:5px;line-height:60px;display:inline-block;}
@@ -17,4 +18,11 @@
 .pagination{font-size:80%;}.pagination a{text-decoration:none;border:solid 1px #AAE;color:#15B;display:block;float:left;padding:0.3em 0.5em;margin-right:5px;margin-bottom:5px;min-width:1em;text-align:center;}
 .pagination span{display:block;float:left;padding:0.3em 0.5em;margin-right:5px;margin-bottom:5px;min-width:1em;text-align:center;}
 .pagination .current{background:#26B;color:#fff;border:solid 1px #AAE;}.pagination .current.prev,.pagination .current.next{color:#999;border-color:#999;background:#fff;}
+.dna-Partners{background:#eeeeee;min-height:200px;padding-bottom:10px;}.dna-Partners ul.thumbnails{list-style:none;margin:0;padding:0;}
+.dna-Partners .carousel-control{top:40%;}.dna-Partners .carousel-control.left{left:-50px;background:none;}
+.dna-Partners .carousel-control.right{right:-50px;background:none;}
+.dna-Partners .carousel-indicators{z-index:15;margin:0 0 0 -60px;list-style:none;text-align:center;position:absolute;left:90%;top:-25px;width:80px;}.dna-Partners .carousel-indicators li{display:inline-block;width:8px;height:8px;margin-left:0;margin-right:0;text-indent:-999px;border:1px solid black;border-radius:5px;cursor:pointer;}
+.dna-Partners .carousel-indicators .active{background-color:black;}
+.dna-Footer{background:black;min-height:150px;padding:15px 0;color:white;}.dna-Footer .copyright{font-size:11px;text-align:center;}
+.dna-Footer .footer-nav{color:white;text-transform:uppercase;font-weight:600;list-style:none;padding:0;text-align:left;}.dna-Footer .footer-nav li{height:26px;}.dna-Footer .footer-nav li a{color:white;}.dna-Footer .footer-nav li a:hover{color:#eeeeee;text-decoration:none;}
 @media (min-width:768px){.dna-CurrentExpo{padding:200px 0;}}@media (max-width:768px){.dna-Artists li{width:31%;}}@media (max-width:480px){.dna-Artists li{width:48%;}}

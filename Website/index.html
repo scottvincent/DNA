@@ -45,16 +45,17 @@
         <a class="navbar-brand" href="#"><img src="img/DNA-logo.svg" />Artspace</a>
         <div class="nav-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#"><i class="icon-home icon-large"></i><span class="visible-sm">Home</span></a></li>
+            <li class="active"><a href="#"><i class="icon-home icon-large"></i><span class="visible-sm">home</span></a></li>
             <li><a href="#">events</a></li>
-            <li><a href="#Gallery">artists</a></li>
-            <li><a href="#Gallery">gallery</a></li>
+            <li><a href="#artists">artists</a></li>
+            <li><a href="#news">news</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
           </ul>
-          <ul class="nav navbar-nav pull-right">
-            <li><a href="#"><span class="icon-facebook icon-large"></span><span class="visible-sm">Facebook</span></a></li>
-            <li><a href="#"><span class="icon-twitter icon-large"></span><span class="visible-sm">Twitter</span></a></li>
+          <ul class="nav navbar-nav pull-right dna-Social">
+            <li><a href="#"><span class="icon-facebook icon-2x"></span><span class="visible-sm">Facebook</span></a></li>
+            <li><a href="#"><span class="icon-twitter icon-2x"></span><span class="visible-sm">Twitter</span></a></li>
+            <li><a href="#"><span class="icon-youtube icon-2x"></span><span class="visible-sm">Youtube</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -82,7 +83,7 @@
   </div>
 
 <!-- Artists --> 
-    <div class="container">
+    <div class="container" id="artists">
       <div class="row">
         <div class="col col-lg-12">
           <h1>Artists <button class="btn btn-primary btn-small disabled">See All</button></h1>
@@ -134,11 +135,12 @@
         </div>
       </div>
     </div>  
+
 <!-- Tumblr -->
-    <div class="container">
+    <div class="container" >
       <div class="row">
         <div class="col col-lg-12">
-          <h1>News</h1>
+          <h1 id="news">News</h1>
         </div>
       </div>
       <div class="row">
@@ -146,6 +148,131 @@
           <div id="loading">Loading...</div>
           <div id="posts"></div>
           <div id="pagination"></div>
+          <a href="#" class="btn btn-primary">See All</a>
+        </div>
+      </div>
+    </div>
+
+<!-- Partners -->
+    <div class="dna-Partners" id="partners">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-8 pull-left">
+            <h1>Partners</h1>
+            <div class="carousel slide col col-lg-12" id="partnersCarousel">
+            <ol class="carousel-indicators">
+              <li data-target="#partnersCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#partnersCarousel" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="item active">
+                <ul class="thumbnails">
+                  <li class="col col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/217x270" alt="">
+                    </div>
+                  </li>
+                  <li class="col col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/217x270" alt="">
+                    </div>
+                  </li>
+                  <li class="col col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/217x270" alt="">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul class="thumbnails">
+                  <li class="col col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/217x270" alt="">
+                    </div>
+                  </li>
+                  <li class="col col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/217x270" alt="">
+                    </div>
+                  </li>
+                  <li class="col col-sm-4">
+                    <div class="thumbnail">
+                        <img src="http://placehold.it/217x270" alt="">
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a class="left carousel-control hidden-sm" href="#partnersCarousel" data-slide="prev">
+              <span class="icon-chevron-left icon-2x"></span>
+            </a>
+            <a class="right carousel-control hidden-sm" href="#partnersCarousel" data-slide="next">
+              <span class="icon-chevron-right icon-2x"></span>
+            </a>
+          </div>
+          </div>
+          <div class="col col-lg-4 pull-right">
+            <h1>Mailing List</h1>
+            <p>Enter your email address below to join our mailing list.</p>
+            <form>
+              <div class="input-group input-block-level">
+                <input type="email" required placeholder="johnsmith@gmail.com">
+                <span class="input-group-btn">
+                  <button class="btn btn-primary" type="button">Join</button>
+                </span>
+              </div>
+            </form>
+          </div>    
+        </div>
+      </div>
+    </div>
+
+<!-- Footer -->
+    <div class="dna-Footer">
+      <div class="container">
+        <div class="row">
+          <div class="col col-lg-3" style="text-align:center;">
+            <img src="img/DNA-logo-white.svg" width="150" />
+          </div>
+          <div class="col col-lg-3">
+            <ul class="footer-nav">
+              <li><a href="#">home</a></li>
+              <li><a href="#">events</a></li>
+              <li><a href="#artists">artists</a></li>
+              <li><a href="#news">news</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </div>
+          <div class="col col-lg-3">
+            <ul class="footer-nav">
+              <li><a href="#"><span class="icon-tumblr icon-large"></span> Blog</a></li>
+              <li><a href="#"><span class="icon-facebook icon-large"></span> Like</a></a></li>
+              <li><a href="#"><span class="icon-twitter icon-large"></span> Follow</a></a></li>
+              <li><a href="#"><span class="icon-youtube icon-large"></span> Subscribe</a></a></li>
+              <li><a href="#"><span class="icon-google-plus icon-large"></span> Join</a></a></li>
+            </ul>
+            
+          </div>
+          <div class="col col-lg-3">
+            <address>
+              <strong>DNA Artspace</strong><br>
+              795 Dundas St<br>
+              London, ON N6N 6N6<br>
+              <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+
+            <address>
+              <strong>Inquiries</strong><br>
+              <a href="mailto:#">first.last@example.com</a>
+            </address>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col col-lg-12 copyright">
+            &copy; 2013 DNA Artspace. Site by <a href="http://www.iesgroup.ca">IES Group Inc.</a>
+          </div>
         </div>
       </div>
     </div>

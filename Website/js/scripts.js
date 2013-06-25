@@ -42,7 +42,7 @@ $(document).ready(function () {
     $('#posts')
         .tumblr({
             url:        'http://blog.thehiddenventure.com',
-            pagination: '#pagination',
+            pagination: false,
             loading:    '#loading',
             perPage:    5,
             photoSize: 250,
