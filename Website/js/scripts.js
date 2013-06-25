@@ -38,3 +38,16 @@ $(window).resize(function(){
     }
   });
 });
+$(document).ready(function () {
+    $('#posts')
+        .tumblr({
+            url:        'http://blog.thehiddenventure.com',
+            pagination: '#pagination',
+            loading:    '#loading',
+            perPage:    5,
+            photoSize: 250,
+            videoSize: 500,
+            photoThumbSize: 75,
+            photoLightboxSize: 500
+        });
+});

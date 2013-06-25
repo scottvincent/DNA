@@ -88,7 +88,7 @@
     padding: 0 3%;
     list-style: none;
     & li{
-        width: 31%;
+        width: 23%;
         float: left;
         font-size: 17px;
         font-weight: 300;
@@ -118,9 +118,57 @@
         }
     }
 }
+.pagination {
+    font-size: 80%;
+    & a {
+        text-decoration: none;
+        border: solid 1px #AAE;
+    	color: #15B;
+        display: block;
+        float: left;
+        padding: 0.3em 0.5em;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    	min-width:1em;
+    	text-align:center;
+    }
+    & span {
+        display: block;
+        float: left;
+        padding: 0.3em 0.5em;
+        margin-right: 5px;
+    	margin-bottom: 5px;
+    	min-width:1em;
+    	text-align:center;
+    }
+    & .current {
+        background: #26B;
+        color: #fff;
+    	border: solid 1px #AAE;
+        &.prev, &.next{
+        	color:#999;
+        	border-color:#999;
+        	background:#fff;
+        }
+    }
+}
 @media (min-width: @screen-tablet){
     .dna-CurrentExpo{
         padding: 200px 0;
+    }
+}
+@media (max-width: @screen-tablet){
+    .dna-Artists {
+        & li{
+            width: 31%;
+        }
+    }
+}
+@media (max-width: @screen-phone){
+    .dna-Artists {
+        & li{
+            width: 48%;
+        }
     }
 }
 
