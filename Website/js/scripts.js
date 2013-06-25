@@ -34,7 +34,7 @@ $(window).resize(function(){
   $('#dna-Gallery').isotope({
     // update columnWidth to a percentage of container width
     masonryHorizontal: { 
-      columnWidth: 200,
+      rowHeight: 200,
     }
   });
 });
