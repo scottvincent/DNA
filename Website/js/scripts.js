@@ -41,11 +41,11 @@ $(window).resize(function(){
 $(document).ready(function () {
     $('#posts')
         .tumblr({
-            url:        'http://blog.thehiddenventure.com',
+            url:        'http://thestrathconaartgallery.tumblr.com',
             pagination: false,
             loading:    '#loading',
             perPage:    5,
-            photoSize: 250,
+            photoSize: 400,
             videoSize: 500,
             photoThumbSize: 75,
             photoLightboxSize: 500
