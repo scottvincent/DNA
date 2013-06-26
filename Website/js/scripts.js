@@ -41,13 +41,14 @@ $(window).resize(function(){
 $(document).ready(function () {
     $('#posts')
         .tumblr({
-            url:        'http://thestrathconaartgallery.tumblr.com',
+            url:        'http://pacegallery.tumblr.com',
             pagination: false,
             loading:    '#loading',
             perPage:    5,
             photoSize: 400,
             videoSize: 500,
             photoThumbSize: 75,
-            photoLightboxSize: 500
+            photoLightboxSize: 500,
+            fancybox: false
         });
 });
