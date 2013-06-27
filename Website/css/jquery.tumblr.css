@@ -6,6 +6,7 @@
 ul.tumblr-posts {
   list-style-type: none;
   padding-left: 0px;
+  
 }
 /* line 10, ../../sass/jquery.tumblr.sass */
 ul.tumblr-posts li.tumblr-post {

@@ -7,6 +7,7 @@
 
 .navbar{
     margin-bottom:0;
+    border-bottom: @borderlineheight solid @dna-red;
 }
 .navbar-brand {
     padding: 0 15px;
@@ -25,8 +26,7 @@
     top: 1px; // Default is 10px
 }
 .navbar-nav.dna-Social li a {
-    padding-top: (@navbar-height - 29px) /2;
-    padding-bottom: (@navbar-height - 29px) /2;
+    padding: (@navbar-height - 29px) /2;
 }
 
 //Hero Unit
@@ -34,6 +34,7 @@
 .dna-SpaceImg{
     background: url('../img/SpaceImg.jpg') center no-repeat;
     background-size: cover;
+    border-bottom: @borderlineheight solid @dna-blue;
 }
 .dna-CurrentExpo{
     padding: 100px 0; 
@@ -109,6 +110,7 @@
 .dna-BlackBG{
     background: black;
     padding: 0 0 10px 0;
+    border-bottom: @borderlineheight solid @dna-orange;
 }
 #dna-Gallery{
     height: 500px;   
@@ -122,6 +124,44 @@
         }
     }
 }
+
+nav.primary {
+    width:auto;
+	margin:30px auto;
+	display:table;
+    & ul li  {
+    	float:left;
+    	list-style:none;
+        & a {
+            height:39px;
+        	display:block;
+        	font-size:15px;
+        	color:#000;
+        	padding:0 10px;
+        	text-decoration:none;
+        	line-height:39px;
+            &.selected {
+                border-bottom: 3px solid #ED3131;
+            }
+        }
+    }
+}
+.entry {
+	position:relative;
+	float:left;
+	margin:10px;
+	cursor:pointer;
+	width:225px;
+	height:225px;
+	padding:0;
+}
+.magnifier {}
+.video-hover {}
+
+.entry:hover .video-hover,
+.entry:hover .magnifier { opacity:1; }
+
+
 .pagination {
     font-size: 80%;
     & a {
@@ -159,6 +199,7 @@
 
 .dna-Partners{
     background: @navbar-bg;
+    border-top: @borderlineheight solid @dna-green;
     min-height: 200px;
     padding-bottom: 10px;
     margin-top: 10px;

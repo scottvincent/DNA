@@ -11,9 +11,9 @@
           document.createTextNode("@-ms-viewport{width:auto!important}")
         );
         document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-      } 
+      }
 
-// Gallery
+/* Gallery
   $('#dna-Gallery').isotope({
     // options
     itemSelector : '.item',
@@ -28,16 +28,69 @@
       rowHeight: 200,
     }
   });
-
+*/
 })();
-$(window).resize(function(){
+
+/*$(window).resize(function(){
   $('#dna-Gallery').isotope({
     // update columnWidth to a percentage of container width
     masonryHorizontal: { 
       rowHeight: 200,
     }
   });
-});
+});*/
+
+
+//Portfolio
+  var $container = $('#dna-Gallery');
+  $container.isotope({
+    filter: '*',
+    animationOptions: {
+      duration: 750,
+      easing: 'linear',
+      queue: false,
+    }
+
+  });
+
+  $('nav.primary ul a').click(function(){
+    var selector = $(this).attr('data-filter');
+    $container.isotope({
+      filter: selector,
+      animationOptions: {
+        duration: 750,
+        easing: 'linear',
+        queue: false,
+      }
+    });
+    return false;
+  });
+
+  var $optionSets = $('nav.primary ul'),
+         $optionLinks = $optionSets.find('a');
+   
+         $optionLinks.click(function(){
+            var $this = $(this);
+      // don't proceed if already selected
+      if ( $this.hasClass('selected') ) {
+          return false;
+      }
+     var $optionSet = $this.parents('nav.primary ul');
+     $optionSet.find('.selected').removeClass('selected');
+     $this.addClass('selected'); 
+  });
+
+// prettyPhoto 
+$(document).ready(function(){
+  $('a[data-gal]').each(function() {
+      $(this).attr('rel', jQuery(this).data('gal'));
+  });   
+  $("a[data-rel^='prettyPhoto']").prettyPhoto({animationSpeed:'slow',theme:'light_square',slideshow:false,overlay_gallery: false,social_tools:false,deeplinking:false});
+}); 
+
+
+
+// Tumblr
 $(document).ready(function () {
     $('#posts')
         .tumblr({

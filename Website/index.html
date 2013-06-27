@@ -31,6 +31,7 @@
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
     <link href="css/jquery.tumblr.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
     <link href="css/styles.css" rel="stylesheet" media="screen">
 
   </head>
@@ -87,18 +88,17 @@
       <div class="row">
         <div class="col col-lg-12">
           <h1>Artists <button class="btn btn-primary btn-small disabled">See All</button></h1>
-          <ul class="dna-Artists">
-            <li>Name 1</li>
-            <li>Name 2</li>
-            <li>Name 3</li>
-            <li>Name 4</li>
-            <li>Name 5</li>
-            <li>Name 6</li>
-            <li>Name 7</li>
-            <li>Name 8</li>
-            <li>Name 9</li>
-            <li>Name 10</li>
-            <div class="clearfix"></div>
+          <nav class="primary clearfix">
+                <ul>
+                    <li><a href="#" class="selected" data-filter="*">All</a></li>
+                    <li><a href="#" data-filter=".web">Web Design</a></li>
+                    <li><a href="#" data-filter=".ill">Ilustration</a></li>
+                    <li><a href="#" data-filter=".logo">Logo</a></li>
+                    <li><a href="#" data-filter=".video">Video</a></li>
+                    <li><a href="#" data-filter=".print">Print Design</a></li>
+                </ul>
+              </nav>
+         
           </ul>
         </div>
       </div>
@@ -110,26 +110,93 @@
         <div class="row">
           <div class="col col-lg-12">
             <div id="dna-Gallery">
-              <div class="item"><img src="http://placehold.it/1265x1270" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1270x1253" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1325x1270" alt=""></div>
-              <div class="item"><img src="http://placehold.it/2117x1517" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1500x1270" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1234x1213" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1290x1770" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1216x1235" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1247x1431" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1248x1224" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1507x1340" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1243x1232" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1245x1430" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1234x1549" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1217x1480" alt=""></div>
-              <div class="item"><img src="http://placehold.it/640x1270" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1308x1310" alt=""></div>
-              <div class="item"><img src="http://placehold.it/1200x1600" alt=""></div>
-              <div class="item"><img src="http://placehold.it/234x503" alt=""></div>
-              <div class="item"><img src="http://placehold.it/214x391" alt=""></div>
+                 
+                  
+                  <article class="entry video">
+                    <a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                              <img src="img/gallery/work1.jpg" alt="">
+                    <span class="video-hover"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry web">
+                              <a data-rel="prettyPhoto" href="img/gallery/work2.jpg">
+                    <img src="img/gallery/work2.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry print">
+                              <a data-rel="prettyPhoto" href="img/gallery/work3.jpg">
+                    <img src="img/gallery/work3.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry ill">
+                              <a data-rel="prettyPhoto" href="img/gallery/work4.jpg">
+                    <img src="img/gallery/work4.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry video logo">
+                    <a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                              <img src="img/gallery/work5.jpg" alt="">
+                    <span class="video-hover"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry web print">
+                              <a data-rel="prettyPhoto" href="img/gallery/work6.jpg">
+                    <img src="img/gallery/work6.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry video logo print">
+                    <a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                              <img src="img/gallery/work7.jpg" alt="">
+                    <span class="video-hover"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry ill logo video">
+                              <a data-rel="prettyPhoto" href="img/gallery/work2.jpg">
+                    <img src="img/gallery/work8.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article> 
+                             
+                  <article class="entry video logo">
+                              <a data-rel="prettyPhoto" href="img/gallery/work9.jpg">
+                    <img src="img/gallery/work9.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry web print">
+                              <a data-rel="prettyPhoto" href="img/gallery/work10.jpg">
+                    <img src="img/gallery/work10.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry video logo print">
+                    <a data-rel="prettyPhoto" href="http://vimeo.com/34266952">
+                              <img src="img/gallery/work11.jpg" alt="">
+                    <span class="video-hover"></span>
+                              </a>
+                  </article>
+
+                  <article class="entry ill logo video">
+                              <a data-rel="prettyPhoto" href="img/gallery/work12.jpg">
+                    <img src="img/gallery/work12.jpg" alt="">
+                    <span class="magnifier"></span>
+                              </a>
+                  </article>  
+
+
             </div>
           </div>
         </div>
@@ -286,6 +353,7 @@
     <script type="text/javascript" src="js/jquery.timeago.js"></script>
     <script type="text/javascript" src="js/jquery.pagination.js"></script>
     <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
 
     <!-- Optionally enable responsive features in IE8 
