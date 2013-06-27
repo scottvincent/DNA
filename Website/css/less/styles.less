@@ -89,21 +89,26 @@
     }
 }
 .dna-Artists {
+    & ul{
     margin: 15px 0;
     padding: 0 3%;
     list-style: none;
-    & li{
-        width: 23%;
-        float: left;
-        font-size: 17px;
-        font-weight: 300;
-        margin: 3px 1%;
-        background: rgba(0, 0, 0, 0.1);
-        padding: 0 5px;
-        line-height: 28px;
-        cursor: pointer;
-        &:hover{
-            background: rgba(0,0,0,0.2);
+        & li{
+            width: 23%;
+            float: left;
+            font-size: 17px;
+            font-weight: 300;
+            margin: 3px 1%;
+            background: rgba(0, 0, 0, 0.1);
+            padding: 0 5px;
+            line-height: 28px;
+            cursor: pointer;
+            &:hover{
+                background: rgba(0,0,0,0.2);
+            }
+            & a{
+                display: block;
+            }
         }
     }
 }
@@ -280,15 +285,19 @@ nav.primary {
 }
 @media (max-width: @screen-tablet){
     .dna-Artists {
-        & li{
-            width: 31%;
-        }
+         & ul{
+            & li{
+                width: 31%;
+            }
+         }
     }
 }
 @media (max-width: @screen-phone){
-    .dna-Artists {
-        & li{
-            width: 48%;
+    .dna-Artists{ 
+        & ul{
+            & li{
+                width: 48%;
+            }
         }
     }
 }

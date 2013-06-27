@@ -53,7 +53,7 @@
 
   });
 
-  $('nav.primary ul a').click(function(){
+  $('.dna-Artists a').click(function(){
     var selector = $(this).attr('data-filter');
     $container.isotope({
       filter: selector,
@@ -66,7 +66,7 @@
     return false;
   });
 
-  var $optionSets = $('nav.primary ul'),
+  var $optionSets = $('.dna-Artists'),
          $optionLinks = $optionSets.find('a');
    
          $optionLinks.click(function(){
@@ -75,9 +75,15 @@
       if ( $this.hasClass('selected') ) {
           return false;
       }
-     var $optionSet = $this.parents('nav.primary ul');
+      
+     var $optionSet = $this.parents('.dna-Artists');
      $optionSet.find('.selected').removeClass('selected');
      $this.addClass('selected'); 
+     if ( $('.seeall').hasClass('selected') ) {
+          $('.seeall').addClass('disabled')
+      }else{
+         $('.seeall').removeClass('disabled')
+      };
   });
 
 // prettyPhoto 
