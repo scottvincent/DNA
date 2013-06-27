@@ -53,8 +53,8 @@
     },
     resizeable: false,
     animationEngine : 'best-available',
-    masonryHorizontal: { 
-      rowHeight: 200,
+    masonry: { 
+      columnWidth: 200,
     }
 
   });
