@@ -45,10 +45,16 @@
   var $container = $('#dna-Gallery');
   $container.isotope({
     filter: '*',
+    itemSelector : 'article',
     animationOptions: {
       duration: 750,
       easing: 'linear',
       queue: false,
+    },
+    resizeable: false,
+    animationEngine : 'best-available',
+    masonryHorizontal: { 
+      rowHeight: 200,
     }
 
   });
