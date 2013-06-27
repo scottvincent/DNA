@@ -11,8 +11,8 @@
 .dna-EventCard{min-height:200px;background:#666;margin:5px;padding:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;vertical-align:bottom;text-align:center;}.dna-EventCard .heading{color:#000000;font-weight:700;font-size:16px;text-transform:uppercase;}
 .dna-EventCard .title{color:white;font-weight:600;font-size:22px;line-height:26px;}
 .dna-EventCard img{max-height:100px;max-width:100px;display:block;margin:5px auto;}
-.dna-Artists ul{margin:15px 0;padding:0 3%;list-style:none;}.dna-Artists ul li{width:23%;float:left;font-size:17px;font-weight:300;margin:3px 1%;background:rgba(0, 0, 0, 0.1);padding:0 5px;line-height:28px;cursor:pointer;}.dna-Artists ul li:hover{background:rgba(0, 0, 0, 0.2);}
-.dna-Artists ul li a{display:block;}
+.dna-Artists ul{margin:15px 0;padding:0 3%;list-style:none;}.dna-Artists ul li{width:23%;float:left;font-size:24px;font-weight:100;margin:3px 1%;line-height:32px;cursor:pointer;}.dna-Artists ul li:hover{background:#000000;color:white;}
+.dna-Artists ul li a{display:block;color:black;padding:5px 5px;text-decoration:none;}.dna-Artists ul li a:hover{color:white;}
 .dna-BlackBG{background:black;padding:0 0 10px 0;border-bottom:0px solid #e3630b;}
 #dna-Gallery{height:500px;width:100%;padding:5px 0;}#dna-Gallery .item{max-width:20%;padding:5px;}#dna-Gallery .item img{max-width:100%;}
 nav.primary{width:auto;margin:30px auto;display:table;}nav.primary ul li{float:left;list-style:none;}nav.primary ul li a{height:39px;display:block;font-size:15px;color:#000;padding:0 10px;text-decoration:none;line-height:39px;}nav.primary ul li a.selected{border-bottom:3px solid #ED3131;}
