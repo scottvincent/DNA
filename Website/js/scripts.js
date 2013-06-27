@@ -12,33 +12,17 @@
         );
         document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
       }
-
-/* Gallery
-  $('#dna-Gallery').isotope({
-    // options
-    itemSelector : '.item',
-    resizeable: false,
-    animationEngine : 'best-available',
-    animationOptions: {
-     duration: 750,
-     easing: 'linear',
-     queue: false,
-   },
-    masonryHorizontal: {
-      rowHeight: 200,
-    }
-  });
-*/
+$('#dna-Gallery article:first').addClass('width2');
 })();
 
-/*$(window).resize(function(){
+$(window).smartresize(function(){
   $('#dna-Gallery').isotope({
     // update columnWidth to a percentage of container width
     masonryHorizontal: { 
       rowHeight: 200,
     }
   });
-});*/
+});
 
 
 //Portfolio
@@ -51,13 +35,20 @@
       easing: 'linear',
       queue: false,
     },
-    resizeable: false,
+     sortBy : 'random',
+    resizeable: true,
     animationEngine : 'best-available',
     masonry: { 
-      columnWidth: 200,
+      columnWidth: $container.width() / 5,
+      cornerStampSelector: '.corner-stamp'
     }
 
   });
+
+  var $sortedItems = $container.data('isotope').$filteredAtoms;
+  $container.find('.width2').removeClass('width2');
+  $sortedItems.first().addClass('width2');
+  $container.isotope( 'reLayout', function(){} )
 
   $('.dna-Artists a').click(function(){
     var selector = $(this).attr('data-filter');
@@ -74,7 +65,6 @@
 
   var $optionSets = $('.dna-Artists'),
          $optionLinks = $optionSets.find('a');
-   
          $optionLinks.click(function(){
             var $this = $(this);
       // don't proceed if already selected
@@ -91,6 +81,9 @@
          $('.seeall').removeClass('hide')
       };
   });
+
+  
+
 
 // prettyPhoto 
 $(document).ready(function(){
