@@ -16,8 +16,9 @@
 .dna-BlackBG{background:black;padding:0 0 10px 0;border-bottom:8px solid #e0ac00;}
 #dna-Gallery{height:500px;width:100%;padding:5px 0;}#dna-Gallery .entry{width:20%;min-width:20%;max-width:20%;padding:5px;position:relative;cursor:pointer;}#dna-Gallery .entry img{max-width:100%;min-width:100%;}
 #dna-Gallery .entry.width2{width:40%;min-width:40%;max-width:40%;}
-.artistbio{width:40%;min-width:40%;max-width:40%;float:left;color:white;}
+.artistbio{width:100%;min-width:100%;max-width:100%;float:left;color:white;padding:15px;}
 .entry:hover .video-hover,.entry:hover .magnifier{opacity:1;}
+.corner-stamp{width:40%;float:left;color:white;}
 .pagination{font-size:80%;}.pagination a{text-decoration:none;border:solid 1px #AAE;color:#15B;display:block;float:left;padding:0.3em 0.5em;margin-right:5px;margin-bottom:5px;min-width:1em;text-align:center;}
 .pagination span{display:block;float:left;padding:0.3em 0.5em;margin-right:5px;margin-bottom:5px;min-width:1em;text-align:center;}
 .pagination .current{background:#26B;color:#fff;border:solid 1px #AAE;}.pagination .current.prev,.pagination .current.next{color:#999;border-color:#999;background:#fff;}

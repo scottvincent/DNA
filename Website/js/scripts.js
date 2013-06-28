@@ -1,4 +1,27 @@
-// Starting Point Scripts
+// DNA Scripts
+
+$.Isotope.prototype._masonryReset = function() {
+  // layout-specific props
+  this.masonry = {};
+  this._getSegments();
+  var i = this.masonry.cols;
+  this.masonry.colYs = [];
+  while (i--) {
+    this.masonry.colYs.push(0);
+  }
+
+  if ( this.options.masonry.cornerStampSelector ) {
+    var $cornerStamp = this.element.find( this.options.masonry.cornerStampSelector ),
+    stampWidth = $cornerStamp.outerWidth(true) - ( this.element.width() % this.masonry.columnWidth ),
+
+    cornerCols = Math.ceil( stampWidth / this.masonry.columnWidth ),
+    cornerStampHeight = $cornerStamp.outerHeight(true);
+    for ( i = 0; i < Math.min( this.masonry.cols - cornerCols, cornerCols ); i++ ) {
+      this.masonry.colYs[i] = cornerStampHeight;
+    }
+  }
+};
+
 (function() {
 // iPhone 5 WebApp height Fix
       if (window.screen.height==568) {
@@ -48,7 +71,10 @@ $(window).smartresize(function(){
   $sortedItems.first().addClass('width2');
   $sortedItems.eq(11).addClass('width2');
   $sortedItems.eq(21).addClass('width2');
-  $container.isotope( 'reLayout', function(){} )
+  $container.isotope( 'reLayout' )
+
+
+
 
   $('.dna-Artists a').click(function(){
     var selector = $(this).attr('data-filter');
@@ -58,10 +84,14 @@ $(window).smartresize(function(){
         duration: 750,
         easing: 'linear',
         queue: false,
+      },
+      masonry: {
+        columnWidth: $container.width() / 5,
+        cornerStampSelector: '.corner-stamp'
       }
     });
-
-    $container.isotope( 'reLayout', function(){} );
+    
+    $container.isotope( 'reLayout' );
     return false;
   });
 
@@ -69,10 +99,13 @@ $(window).smartresize(function(){
          $optionLinks = $optionSets.find('a');
          $optionLinks.click(function(){
             var $this = $(this);
+            var selector = $(this).attr('data-filter');
          //change sizes of randomly featured to standard size   
             $container.find('.width2').removeClass('width2');
-            $('.artistbio').removeClass('hide');
-            $container.isotope( 'reLayout', function(){});
+            $('.artistbio').addClass('hide');
+            $(selector).removeClass('hide');
+            $container.isotope( 'reLayout' );
+           
       // don't proceed if already selected
       if ( $this.hasClass('selected') ) {
           return false;
@@ -88,7 +121,7 @@ $(window).smartresize(function(){
           $sortedItems.eq(11).addClass('width2');
           $sortedItems.eq(21).addClass('width2');
           $('.artistbio').addClass('hide');
-          $container.isotope( 'reLayout', function(){});
+          $container.isotope( 'reLayout' );
       }else{
          $('.seeall').removeClass('hide')
       };
