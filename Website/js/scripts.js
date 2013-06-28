@@ -12,14 +12,13 @@
         );
         document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
       }
-$('#dna-Gallery article:first').addClass('width2');
 })();
 
 $(window).smartresize(function(){
   $('#dna-Gallery').isotope({
     // update columnWidth to a percentage of container width
-    masonryHorizontal: { 
-      rowHeight: 200,
+    masonry: { 
+      columnWidth: $container.width() / 5,
     }
   });
 });
@@ -28,7 +27,7 @@ $(window).smartresize(function(){
 //Portfolio
   var $container = $('#dna-Gallery');
   $container.isotope({
-    filter: '*',
+    filter: '.entry',
     itemSelector : 'article',
     animationOptions: {
       duration: 750,
@@ -40,14 +39,15 @@ $(window).smartresize(function(){
     animationEngine : 'best-available',
     masonry: { 
       columnWidth: $container.width() / 5,
-      cornerStampSelector: '.corner-stamp'
     }
 
   });
 
   var $sortedItems = $container.data('isotope').$filteredAtoms;
-  $container.find('.width2').removeClass('width2');
+
   $sortedItems.first().addClass('width2');
+  $sortedItems.eq(11).addClass('width2');
+  $sortedItems.eq(21).addClass('width2');
   $container.isotope( 'reLayout', function(){} )
 
   $('.dna-Artists a').click(function(){
@@ -60,6 +60,8 @@ $(window).smartresize(function(){
         queue: false,
       }
     });
+
+    $container.isotope( 'reLayout', function(){} );
     return false;
   });
 
@@ -67,6 +69,10 @@ $(window).smartresize(function(){
          $optionLinks = $optionSets.find('a');
          $optionLinks.click(function(){
             var $this = $(this);
+         //change sizes of randomly featured to standard size   
+            $container.find('.width2').removeClass('width2');
+            $('.artistbio').removeClass('hide');
+            $container.isotope( 'reLayout', function(){});
       // don't proceed if already selected
       if ( $this.hasClass('selected') ) {
           return false;
@@ -77,6 +83,12 @@ $(window).smartresize(function(){
      $this.addClass('selected'); 
      if ( $('.seeall').hasClass('selected') ) {
           $('.seeall').addClass('hide')
+      //change sizes of randomly featured to back to double size  
+          $sortedItems.first().addClass('width2');
+          $sortedItems.eq(11).addClass('width2');
+          $sortedItems.eq(21).addClass('width2');
+          $('.artistbio').addClass('hide');
+          $container.isotope( 'reLayout', function(){});
       }else{
          $('.seeall').removeClass('hide')
       };
