@@ -3,7 +3,7 @@
 .navbar{margin-bottom:0;}
 .navbar-brand{padding:0 15px;color:black;}.navbar-brand img{height:70px;padding:7px 0 9px;margin-right:5px;}
 .navbar-brand:hover{color:black;background:rgba(0, 0, 0, 0.1);}
-.navbar-nav.dna-Social li a{margin:11.5px 3px;height:46px;width:46px;background:#555555;padding:10.75px 5.5px;color:white;border-bottom-left-radius:50%;border-top-left-radius:50%;border-bottom-right-radius:50%;border-top-right-radius:50%;}
+.navbar-nav.dna-Social li a{margin:11.5px 3px;height:46px;width:46px;background:#999999;padding:10.75px 5.5px;color:#eeeeee;border-bottom-left-radius:50%;border-top-left-radius:50%;border-bottom-right-radius:50%;border-top-right-radius:50%;}
 .dna-SpaceImg{background:url('../img/SpaceImg.jpg') center no-repeat;background-size:cover;border-bottom:8px solid #247fcc;}
 .dna-CurrentExpo{padding:100px 0;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;line-height:50px;}
 .dna-CurrentExpo div{font-size:50px;background:black;padding:0;line-height:60px;display:inline;-webkit-box-shadow:0 0 0 5px #000000;box-shadow:0 0 0 5px #000000;}
