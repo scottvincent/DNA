@@ -1,5 +1,6 @@
 // DNA Scripts
 
+// Fix Isotope .corner-stamp to Float Left
 $.Isotope.prototype._masonryReset = function() {
   // layout-specific props
   this.masonry = {};
@@ -9,7 +10,6 @@ $.Isotope.prototype._masonryReset = function() {
   while (i--) {
     this.masonry.colYs.push(0);
   }
-
   if ( this.options.masonry.cornerStampSelector ) {
     var $cornerStamp = this.element.find( this.options.masonry.cornerStampSelector ),
     stampWidth = $cornerStamp.outerWidth(true) - ( this.element.width() % this.masonry.columnWidth ),
@@ -21,30 +21,41 @@ $.Isotope.prototype._masonryReset = function() {
     }
   }
 };
+
+// Populate Data from Google Spreadsheet
 function showInfo(data, tabletop) {
+  // Populate Artist Listing
   $.each( tabletop.sheets("Artists").all(), function(i, artists) {
     var content = "<li><a href='#' data-filter='." + artists.classname + "' >";
     content+= artists.fullname ;
     content+= "</a></li>";
     $(content).appendTo("#artist-buttons"); 
   })
-
+  // Populate Artist Bios
   $.each( tabletop.sheets("Artists").all(), function(i, artists) {
     var content = "<div class='artistbio " + artists.classname + " hide'>";
     content+="<h1>" + artists.fullname + "</h1>";
     content+="<p>" + artists.description + "</p>";
-    content+="<p><a href='" + artists.websiteurl + "'>" + artists.websiteurl + "</a></p>";
-    content+="<p><a href='" + artists.facebookurl + "'><span class='icon-facebook icon-large'></span></a></p>";
-    content+="<p><a href='http://www.twitter.com/" + artists.twitterhandle + "'><span class='icon-twitter icon-large'></span></a></p>";
-    content+="<p><a href='http://www.youtube.com/" + artists.youtubeusername + "'><span class='icon-youtube icon-large'></span></a></p>";
-    content+="</div>";
+    content+="<p>";
+    if (artists.websiteurl != "" ) 
+      content+="<p><a href='" + artists.websiteurl + "'>" + artists.websiteurl + "</a></p>";
+    if (artists.facebookurl != "") 
+      content+="<p><a href='" + artists.facebookurl + "'><span class='icon-facebook icon-large'></span></a> ";
+    if (artists.twitterhandle != "") 
+      content+="<a href='http://www.twitter.com/" + artists.twitterhandle + "'><span class='icon-twitter icon-large'></span></a> ";
+    if (artists.youtubeusername != "") 
+      content+="<a href='http://www.youtube.com/" + artists.youtubeusername + "'><span class='icon-youtube icon-large'></span></a> ";
+    content+="</p></div>";
     $(content).appendTo("#corner-stamp"); 
   })
-
+  // Populate Images
   $.each( tabletop.sheets("Art").all(), function(i, art) {
     var content = "<article class='entry " + art.classname + "'>";
-    content+="<a data-rel='prettyPhoto' rel='prettyPhoto[" + art.classname + "]' href='img/gallery/" + art.imageurl + "'>";
+    content+="<a data-rel='prettyPhoto'  title='" + art.artist + " " + art.date + " - " + art.description + "' rel='prettyPhoto[" + art.classname + "]' href='img/gallery/" + art.imageurl + "'>";
     content+="<img src='img/gallery/" + art.imageurl + "' alt='" + art.title + "' />";
+    content+="<div class='dna-artistlink'><div><p>" + art.title + "</p><p>" + art.date + "</p><p>" + art.artist + "</p></div></div>";
+    if (art.available == "Yes") 
+      content+="<div class='available'><div>Available</div></div>";
     content+="</a>";
     content+="</article>";
     $(content).appendTo("#dna-Gallery"); 
@@ -192,57 +203,48 @@ function showInfo(data, tabletop) {
       $this.addClass('selected'); 
       if ( $('.seeall').hasClass('selected') ) {
         $('.seeall').addClass('hide')
-      //change sizes of randomly featured to back to double size  
-      $sortedItems.first().addClass('width2');
-      $sortedItems.eq(11).addClass('width2');
-      $sortedItems.eq(21).addClass('width2');
-      $('.artistbio').addClass('hide');
-      $container.isotope( 'reLayout' );
+        //change sizes of randomly featured to back to double size  
+        $sortedItems.first().addClass('width2');
+        $sortedItems.eq(11).addClass('width2');
+        $sortedItems.eq(21).addClass('width2');
+        $('.artistbio').addClass('hide');
+        $container.isotope( 'reLayout' );
       }else{
        $('.seeall').removeClass('hide')
       };
     });
-
   });
-
 }
 
 (function() {
 // iPhone 5 WebApp height Fix
-if (window.screen.height==568) {
-  document.querySelector("meta[name=viewport]").content="user-scalable=no, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi";
-}
+  if (window.screen.height==568) {
+    document.querySelector("meta[name=viewport]").content="user-scalable=no, initial-scale=1, maximum-scale=1, target-densitydpi=device-dpi";
+  }
 // Windows Phone 8 IE10 Snap Mode Width Fix
-if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
-  var msViewportStyle = document.createElement("style");
-  msViewportStyle.appendChild(
-    document.createTextNode("@-ms-viewport{width:auto!important}")
-    );
-  document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
-}
+  if ("-ms-user-select" in document.documentElement.style && navigator.userAgent.match(/IEMobile\/10\.0/)) {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+    document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+  }
 })();
 
 $(window).smartresize(function(){
+// Resize Gallery on Window Resize
   $('#dna-Gallery').isotope({
-    // update columnWidth to a percentage of container width
     masonry: { 
       columnWidth: $('#dna-Gallery').width() / 5,
     }
   });
 });
-var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9fpgaspkdF9QNEVPYXpfZklfdjg5YTRrNHBwUmc&output=html';
 
+// Google Spreadsheet
+var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9fpgaspkdF9QNEVPYXpfZklfdjg5YTRrNHBwUmc&output=html';
 
 Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
  wanted: [ "Artists", "Art" ],
  debug: true } )
-
-
-
-
-
-
 
 // Tumblr
 $(document).ready(function () {
