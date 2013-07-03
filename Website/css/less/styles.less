@@ -3,10 +3,16 @@
 @import "variables.less";
 @import "mixins.less";
 
-//Navbar
+h1.heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4em;
+}
 
+//Navbar
 .navbar{
-    margin-bottom:0;
+    margin-bottom: 0;
+    font-weight: 600;
 }
 .navbar-brand {
     padding: 0 15px;
@@ -29,10 +35,11 @@
     height: 36px;
     width: 36px;
     background: black;
-    padding: (@navbar-height - 48.5px) /2 6.5px;
+    padding: (@navbar-height - 49px) /2 8px;
     color: @navbar-bg;
     .border-left-radius(50%);
     .border-right-radius(50%);
+    text-decoration: none;
     &:hover{
         background: @brand-primary;
     }
@@ -43,7 +50,8 @@
 .dna-SpaceImg{
     background: url('../img/SpaceImg.jpg') center no-repeat;
     background-size: cover;
-    border-bottom: @borderlineheight solid @dna-blue;
+    //border-bottom: @borderlineheight solid @dna-blue;
+    .box-shadow(0 @borderlineheight 0 0 @dna-blue);
 }
 .dna-CurrentExpo{
     padding: 100px 0; 
@@ -73,44 +81,64 @@
 }
 .dna-EventCard{
     min-height: 200px;
-    background: #666;
+    background: #fff;
     margin: 5px;
     padding: 10px;
     .box-sizing(border-box);
     position: relative;
     vertical-align: bottom;
-    text-align: center;
+    text-align: left;
+    .box-shadow(5px 5px 0 0 @gray);
     & .heading{
-        color: rgba(0,0,0,1);
+        color: @brand-primary;
         font-weight: 700;
-        font-size: 16px;
+        font-size: 14px;
+        line-height: 20px;
         text-transform: uppercase;
     }
     & .title{
-        color: white;
-        font-weight: 600;
-        font-size: 22px;
+        color: black;
+        font-weight: 900;
+        font-size: 24px;
         line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
     }
     & img{
         max-height: 100px;
         max-width: 100px;
         display: block;
-        margin: 5px auto;
+        margin: 10px auto;
+        .opacity(0.3);
+    }
+    & .date{
+       text-align: center;
+       font-size: 26px;
+       line-height: 28px;
+       font-weight: 300;
+       margin-bottom: 20px;
+       & span{
+            color: @brand-primary;
+            font-weight: 900;
+       }
+    }
+    & .buttonbg{
+        background: black;
+        margin: -10px;
+        padding: 10px;
     }
 }
 .dna-Artists {
     & ul{
-    margin: 15px 0;
-    padding: 0 3%;
+    margin: 30px 0;
+    padding: 0;
     list-style: none;
         & li{
             width: 23%;
             float: left;
             font-size: 24px;
-            font-weight: 100;
-            margin: 3px 1%;
-            
+            font-weight: 500;
+            margin: 3px 2% 0 0;
             line-height: 32px;
             cursor: pointer;
             &:hover{
@@ -119,10 +147,14 @@
             }
             & a{
                 display: block;
-                color: black;
+                color: @gray-dark;
                 padding: 5px 5px;
                 text-decoration: none;
                 &:hover{
+                    color: white;
+                }
+                &.selected{
+                    background: rgba(0,0,0,1);
                     color: white;
                 }
             }
@@ -132,7 +164,8 @@
 .dna-BlackBG{
     background: black;
     padding: 0 0 10px 0;
-    border-bottom: @borderlineheight solid @dna-yellow;
+    //border-bottom: @borderlineheight solid @dna-orange;
+    .box-shadow(0 @borderlineheight 0 0 @dna-orange);
 }
 #dna-Gallery{
     height: 500px;   
@@ -178,7 +211,7 @@
                 }
             }
             &:hover{
-                .opacity(100)
+                .opacity(1)
             }
         }
         
@@ -213,11 +246,6 @@
     color: white;
     padding: 15px;
 }
-.magnifier {}
-.video-hover {}
-
-.entry:hover .video-hover,
-.entry:hover .magnifier { opacity:1; }
 .corner-stamp {
     width: 40%;
     float: left;
@@ -261,8 +289,8 @@
 }
 
 .dna-Partners{
-    background: @navbar-bg;
-    border-top: @borderlineheight solid @dna-orange;
+    background: @gray-lighter;
+    border-top: @borderlineheight solid @dna-yellow;
     min-height: 200px;
     padding-bottom: 10px;
     margin-top: 10px;

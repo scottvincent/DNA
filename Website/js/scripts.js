@@ -254,7 +254,7 @@ $(document).ready(function () {
     pagination: false,
     loading:    '#loading',
     perPage:    5,
-    photoSize: 400,
+    photoSize: 500,
     videoSize: 500,
     photoThumbSize: 75,
     photoLightboxSize: 500,
