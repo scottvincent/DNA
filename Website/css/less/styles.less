@@ -3,10 +3,12 @@
 @import "variables.less";
 @import "mixins.less";
 
+
 h1.heading{
     text-transform: uppercase;
     font-weight: 700;
     font-size: 4em;
+    color: black;
 }
 
 //Navbar
@@ -35,7 +37,7 @@ h1.heading{
     height: 36px;
     width: 36px;
     background: black;
-    padding: (@navbar-height - 49px) /2 8px;
+    padding: (@navbar-height - 49px) /2 7.25px;
     color: @navbar-bg;
     .border-left-radius(50%);
     .border-right-radius(50%);
@@ -253,6 +255,218 @@ h1.heading{
 
 }
 
+& ul.tumblr-posts{
+    padding-left: percentage((2 / @grid-columns));
+    list-style-type: none;   
+    & li.tumblr-post{
+        position: relative;
+        margin-bottom: 20px;
+        padding: 0px 0px 20px 0px;
+        border-bottom: 1px #ededed dotted;
+        clear: both;
+        & .short {
+            font-size: 36px;
+            line-height: 40px;
+            letter-spacing: -1px;
+            font-weight: bold;
+        }
+        & .medium {
+            font-size: 25px;
+            line-height: 27px;
+            letter-spacing: -1px;
+        }
+        &.long {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        & .title {
+            letter-spacing: -1px;
+            margin: 10px 0px 5px 0px;
+            color: #444444;
+            padding: 0px 0px 5px 0px;
+            & a {
+                color: @brand-primary;
+                text-decoration: none;
+            }
+        }
+        & .date{
+            position: absolute;
+            left: -105px;
+            width: 90px;    
+            height: 90px;
+            color: #fff;
+            background: black;
+            .border-top-radius(50%);
+            .border-bottom-radius(50%);
+            text-align: center;
+            top: 0;
+            padding: 0.3em;
+            font-size: 22px;
+            float: left;
+            margin-right: 3px;
+            & .posted{
+                display: none;
+                color: #555555;
+            }
+            & .timeago{
+                line-height: 1em;
+                font-weight: 100;
+                border-bottom: none;  
+                text-transform: uppercase;
+                & span{
+                    color: @brand-primary;
+                    font-size: 2em;
+                    font-weight: 700;
+                    line-height: 0.9em;
+                }
+            }
+        }
+        & .permalink {
+          font-size: 10px;
+          float: left;
+          margin-right: 3px;
+          & .permalink-text {
+              display: none;
+            }
+          & a {
+              text-decoration: none;
+          }
+        }
+        & .tags {
+            font-size: 10px;
+            float: left;
+            & .tagged {
+                display: none;
+            }
+            & ul {
+                list-style-type: none;
+                padding-left: 0px;
+                display: inline;
+                & li {
+                    float: left;
+                    margin-right: 3px;
+                    & a {
+                        text-decoration: none;
+                    }
+                    & .tag-commas {
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+        & .link {
+            color: #444444;
+            margin-top: 10px;
+            padding: 0px 0px 5px 0px;
+            & a {
+                color: @brand-primary;
+            }
+        }
+        & .caption {
+            color: #444444;
+            margin-top: 10px;
+            padding: 0px 0px 5px 0px;
+            & a {
+                color: @brand-primary;
+            }
+        }
+        & .post-footer {
+            clear: both;
+        }
+        &.tumblr-post-regular {
+            font-size: 12px;
+            color: #444444;
+            line-height: 17px;
+            & blockquote {
+                font-style: italic;
+                border-left: solid 2px #444444;
+                padding-left: 10px;
+            }
+            & .description img[align=left] {
+                margin: 0px 3px 3px 0px;
+            }
+        }
+        &.tumblr-post-photo {
+            & ul.photos {
+                list-style-type: none;
+                padding-left: 0px;
+                & li {
+                    float: left;
+                    margin-right: 3px;
+                }
+            }
+        }
+        &.tumblr-post-link { 
+            & span.description {
+                font-size: 13px;
+                font-weight: normal;
+                letter-spacing: -1px;
+                color: #444444;
+            }
+        }
+        &.tumblr-post-quote { 
+            & .quote {
+                margin: 0 0 1.5em;
+                & .quote-text {
+                    font-weight: bold;
+                    color: #888888;
+                    border-left: solid 5px #6498cc;
+                    padding-left: 10px;
+                    & a {
+                        color: #888888;
+                    }
+                }
+                & .source {
+                    font-size: 16px;
+                    font-weight: Bold;
+                    color: #555555;
+                    margin-top: 5px;
+                    & a {
+                        color: #555555;
+                    }
+                }
+            }
+        }
+        &.tumblr-post-conversation {
+            & .conversation {
+                margin: 0 0 1.5em;
+                & ul {
+                    list-style-type: none;
+                    margin: 0px;
+                    padding: 0px 0px 0px 1px;
+                    border-left: solid 5px #bbbbbb;
+                    & li {
+                        font-size: 12px;
+                        padding: 4px 10px 4px 8px;
+                        color: #444444;
+                        margin-bottom: 1px;
+                        & span.label {
+                            font-weight: bold;
+                            margin-right: 3px;
+                        }
+                        & span.user-1 {
+                            color: #cc0000;
+                        }
+                        & span.user-2 {
+                            color: #0000cc;
+                        }
+                        & span.user-3 {
+                            color: #00aa00;
+                        }
+                        &.odd {
+                            background-color: #f4f4f4;
+                        }
+                        &.even {
+                            background-color: #e8e8e8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .pagination {
     font-size: 80%;
     & a {
@@ -330,19 +544,56 @@ h1.heading{
         }
     }
 }
+@media (min-width: @screen-desktop){
+    .post-container{
+        .make-column-offset(2);
+    }
+    .dna-Artists {
+         & ul{
+            & li{
+                width: 23%;
+            }
+         }
+    }
+}
 @media (min-width: @screen-tablet){
     .dna-CurrentExpo{
         padding: 200px 0;
+    }
+    .dna-Artists {
+         & ul{
+            & li{
+                width: 23%;
+            }
+         }
     }
 }
 @media (max-width: @screen-tablet){
     .dna-Artists {
          & ul{
             & li{
-                width: 31%;
+                width: 45%;
             }
          }
     }
+    h1.heading{
+        font-size: 3em;
+    }
+    #posts{
+    & ul{
+        &.tumblr-posts{}   
+        & li{
+            &.tumblr-post{
+                & .date{
+                    left: -55px;
+                    width: 50px;    
+                    height: 50px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
 }
 @media (max-width: @screen-phone){
     .dna-Artists{ 
@@ -353,7 +604,3 @@ h1.heading{
         }
     }
 }
-
-
-
-

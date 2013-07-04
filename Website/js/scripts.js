@@ -229,7 +229,7 @@ function showInfo(data, tabletop) {
   }
 })();
 
-$(window).smartresize(function(){
+$(window).resize(function(){
 // Resize Gallery on Window Resize
   $('#dna-Gallery').isotope({
     masonry: { 
@@ -246,6 +246,10 @@ Tabletop.init( { key: public_spreadsheet_url,
  wanted: [ "Artists", "Art" ],
  debug: true } )
 
+function blogDate(){
+    moment().format("MMM, D"); 
+};
+
 // Tumblr
 $(document).ready(function () {
   $('#posts')
@@ -258,6 +262,8 @@ $(document).ready(function () {
     videoSize: 500,
     photoThumbSize: 75,
     photoLightboxSize: 500,
-    fancybox: false
+    fancybox: false,
+    timeago: false
   });
+
 });

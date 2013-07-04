@@ -160,6 +160,7 @@
 				$this.html(data.posts);
 				if(data.options.loading) {
 					data.options.loading.hide();
+					$('.timeago').each( function() { $(this).html( moment($(this).attr('title')).format("MMM[<br><span>]D[</span>]") ) }); //ADDED BY IES TO CHANGE DATE FORMAT USING MOMENT
 				}
 				$this.slideDown();
 				
