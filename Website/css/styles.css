@@ -2,18 +2,18 @@
 
 h1.heading{text-transform:uppercase;font-weight:700;font-size:4em;color:black;}
 .navbar{margin-bottom:0;font-weight:600;}
-.navbar-brand{padding:0 15px;color:black;}.navbar-brand img{height:70px;padding:7px 0 9px;margin-right:5px;}
+.navbar-brand{padding:0 15px;color:black;font-weight:500;}.navbar-brand img{height:70px;padding:7px 0 9px;margin:0px 5px 0px 0;}
 .navbar-brand:hover{color:black;background:rgba(0, 0, 0, 0.1);}
-.navbar-nav.dna-Social li a{margin:16.5px 3px;height:36px;width:36px;background:black;padding:10.5px 7.25px;color:#ffffff;border-bottom-left-radius:50%;border-top-left-radius:50%;border-bottom-right-radius:50%;border-top-right-radius:50%;text-decoration:none;}.navbar-nav.dna-Social li a:hover{background:#cc0018;}
+.navbar-nav.dna-Social li a{margin:16.5px 3px;height:36px;width:36px;background:black;padding:13px 0 0 7.25px;color:#ffffff;border-bottom-left-radius:50%;border-top-left-radius:50%;border-bottom-right-radius:50%;border-top-right-radius:50%;text-decoration:none;}.navbar-nav.dna-Social li a:hover{background:#cc0018;}
 .dna-SpaceImg{background:url('../img/SpaceImg.jpg') center no-repeat;background-size:cover;-webkit-box-shadow:0 8px 0 0 #247fcc;box-shadow:0 8px 0 0 #247fcc;}
-.dna-CurrentExpo{padding:100px 0;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;line-height:50px;}
-.dna-CurrentExpo div{font-size:50px;background:black;padding:0;line-height:60px;display:inline;-webkit-box-shadow:0 0 0 5px #000000;box-shadow:0 0 0 5px #000000;}
+.dna-CurrentExpo{padding:75px 5px;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;line-height:50px;}
+.dna-CurrentExpo div{font-size:40px;background:black;padding:0;line-height:50px;display:inline;-webkit-box-shadow:0 0 0 5px #000000;box-shadow:0 0 0 5px #000000;}
 .dna-NextEvent{height:100%;display:inline-block;vertical-align:bottom;}
-.dna-EventCard{min-height:200px;background:#fff;margin:5px;padding:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;vertical-align:bottom;text-align:left;-webkit-box-shadow:5px 5px 0 0 #555555;box-shadow:5px 5px 0 0 #555555;}.dna-EventCard .heading{color:#cc0018;font-weight:700;font-size:14px;line-height:20px;text-transform:uppercase;}
+.dna-EventCard{min-height:200px;background:#fff;margin:5px 5px 15px 5px;padding:10px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;position:relative;vertical-align:bottom;text-align:left;-webkit-box-shadow:5px 5px 0 0 #555555;box-shadow:5px 5px 0 0 #555555;}.dna-EventCard .heading{color:#cc0018;font-weight:700;font-size:14px;line-height:20px;text-transform:uppercase;}
 .dna-EventCard .title{color:black;font-weight:900;font-size:24px;line-height:26px;text-align:center;text-transform:uppercase;}
 .dna-EventCard img{max-height:100px;max-width:100px;display:block;margin:10px auto;opacity:0.3;filter:alpha(opacity=30);}
-.dna-EventCard .date{text-align:center;font-size:26px;line-height:28px;font-weight:300;margin-bottom:20px;}.dna-EventCard .date span{color:#cc0018;font-weight:900;}
-.dna-EventCard .buttonbg{background:black;margin:-10px;padding:10px;}
+.dna-EventCard .date{text-align:center;font-size:24px;line-height:28px;font-weight:300;margin-bottom:20px;}.dna-EventCard .date span{color:#cc0018;font-weight:900;}
+.dna-EventCard .buttonbg{background:black;margin:-10px;padding:10px;}.dna-EventCard .buttonbg h4{margin:0;}
 .dna-Artists ul{margin:30px 0;padding:0;list-style:none;}.dna-Artists ul li{width:23%;float:left;font-size:24px;font-weight:500;margin:3px 2% 0 0;line-height:32px;cursor:pointer;}.dna-Artists ul li:hover{background:#000000;color:white;}
 .dna-Artists ul li a{display:block;color:#333333;padding:5px 5px;text-decoration:none;}.dna-Artists ul li a:hover{color:white;}
 .dna-Artists ul li a.selected{background:#000000;color:white;}
@@ -25,15 +25,16 @@ h1.heading{text-transform:uppercase;font-weight:700;font-size:4em;color:black;}
 #dna-Gallery .entry .available{overflow:hidden;width:100%;height:100%;position:absolute;top:0;right:0;pointer-events:none;}#dna-Gallery .entry .available div{background:#8ccf31;position:absolute;font-size:12px;line-height:16px;top:20px;right:-20px;color:#fff;-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-ms-transform:rotate(45deg);-o-transform:rotate(45deg);transform:rotate(45deg);padding:0px 20px;}
 .artistbio{width:100%;min-width:100%;max-width:100%;float:left;color:white;padding:15px;}
 .corner-stamp{width:40%;float:left;color:white;}
-ul.tumblr-posts{padding-left:16.666666666666664%;list-style-type:none;}ul.tumblr-posts li.tumblr-post{position:relative;margin-bottom:20px;padding:0px 0px 20px 0px;border-bottom:1px #ededed dotted;clear:both;}ul.tumblr-posts li.tumblr-post .short{font-size:36px;line-height:40px;letter-spacing:-1px;font-weight:bold;}
+ul.tumblr-posts{padding-left:16.666666666666664%;list-style-type:none;margin-top:30px;}ul.tumblr-posts li.tumblr-post{position:relative;margin-bottom:50px;padding:0px 0px 20px 0px;clear:both;}ul.tumblr-posts li.tumblr-post .short{font-size:36px;line-height:40px;letter-spacing:-1px;font-weight:bold;}
 ul.tumblr-posts li.tumblr-post .medium{font-size:25px;line-height:27px;letter-spacing:-1px;}
 ul.tumblr-posts li.tumblr-post.long{font-size:16px;line-height:20px;}
 ul.tumblr-posts li.tumblr-post .title{letter-spacing:-1px;margin:10px 0px 5px 0px;color:#444444;padding:0px 0px 5px 0px;}ul.tumblr-posts li.tumblr-post .title a{color:#cc0018;text-decoration:none;}
 ul.tumblr-posts li.tumblr-post .date{position:absolute;left:-105px;width:90px;height:90px;color:#fff;background:black;border-top-right-radius:50%;border-top-left-radius:50%;border-bottom-right-radius:50%;border-bottom-left-radius:50%;text-align:center;top:0;padding:0.3em;font-size:22px;float:left;margin-right:3px;}ul.tumblr-posts li.tumblr-post .date .posted{display:none;color:#555555;}
 ul.tumblr-posts li.tumblr-post .date .timeago{line-height:1em;font-weight:100;border-bottom:none;text-transform:uppercase;}ul.tumblr-posts li.tumblr-post .date .timeago span{color:#cc0018;font-size:2em;font-weight:700;line-height:0.9em;}
-ul.tumblr-posts li.tumblr-post .permalink{font-size:10px;float:left;margin-right:3px;}ul.tumblr-posts li.tumblr-post .permalink .permalink-text{display:none;}
+ul.tumblr-posts li.tumblr-post .permalink{font-size:11px;margin-right:3px;display:block;position:absolute;left:-45px;top:48px;text-transform:uppercase;}ul.tumblr-posts li.tumblr-post .permalink .permalink-text{display:block;}
+ul.tumblr-posts li.tumblr-post .permalink .permalink-icon{display:none;}
 ul.tumblr-posts li.tumblr-post .permalink a{text-decoration:none;}
-ul.tumblr-posts li.tumblr-post .tags{font-size:10px;float:left;}ul.tumblr-posts li.tumblr-post .tags .tagged{display:none;}
+ul.tumblr-posts li.tumblr-post .tags{font-size:12px;float:left;display:none;}ul.tumblr-posts li.tumblr-post .tags .tagged{display:none;}
 ul.tumblr-posts li.tumblr-post .tags ul{list-style-type:none;padding-left:0px;display:inline;}ul.tumblr-posts li.tumblr-post .tags ul li{float:left;margin-right:3px;}ul.tumblr-posts li.tumblr-post .tags ul li a{text-decoration:none;}
 ul.tumblr-posts li.tumblr-post .tags ul li .tag-commas{display:none;}
 ul.tumblr-posts li.tumblr-post .link{color:#444444;margin-top:10px;padding:0px 0px 5px 0px;}ul.tumblr-posts li.tumblr-post .link a{color:#cc0018;}
@@ -41,7 +42,9 @@ ul.tumblr-posts li.tumblr-post .caption{color:#444444;margin-top:10px;padding:0p
 ul.tumblr-posts li.tumblr-post .post-footer{clear:both;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-regular{font-size:12px;color:#444444;line-height:17px;}ul.tumblr-posts li.tumblr-post.tumblr-post-regular blockquote{font-style:italic;border-left:solid 2px #444444;padding-left:10px;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-regular .description img[align=left]{margin:0px 3px 3px 0px;}
-ul.tumblr-posts li.tumblr-post.tumblr-post-photo ul.photos{list-style-type:none;padding-left:0px;}ul.tumblr-posts li.tumblr-post.tumblr-post-photo ul.photos li{float:left;margin-right:3px;}
+ul.tumblr-posts li.tumblr-post.tumblr-post-photo ul.photos{list-style-type:none;padding-left:0px;display:block;clear:both;}ul.tumblr-posts li.tumblr-post.tumblr-post-photo ul.photos li{float:left;margin-right:3px;}
+ul.tumblr-posts li.tumblr-post.tumblr-post-photo .media img{margin:0 5px 10px 0;}
+ul.tumblr-posts li.tumblr-post.tumblr-post-photo .media .description{float:left;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-link span.description{font-size:13px;font-weight:normal;letter-spacing:-1px;color:#444444;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-quote .quote{margin:0 0 1.5em;}ul.tumblr-posts li.tumblr-post.tumblr-post-quote .quote .quote-text{font-weight:bold;color:#888888;border-left:solid 5px #6498cc;padding-left:10px;}ul.tumblr-posts li.tumblr-post.tumblr-post-quote .quote .quote-text a{color:#888888;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-quote .quote .source{font-size:16px;font-weight:Bold;color:#555555;margin-top:5px;}ul.tumblr-posts li.tumblr-post.tumblr-post-quote .quote .source a{color:#555555;}
@@ -58,4 +61,4 @@ ul.tumblr-posts li.tumblr-post.tumblr-post-conversation .conversation ul li.even
 .dna-Footer{background:black;min-height:150px;padding:15px 0;color:white;}.dna-Footer .copyright{font-size:11px;text-align:center;}
 .dna-Footer .footer-nav{color:white;text-transform:uppercase;font-weight:600;list-style:none;padding:0;text-align:left;}.dna-Footer .footer-nav li{height:26px;}.dna-Footer .footer-nav li a{color:white;}.dna-Footer .footer-nav li a:hover{color:#ffffff;text-decoration:none;}
 @media (min-width:992px){.dna-Artists ul li{width:23%;}}@media (min-width:992px) and (min-width:768px){.post-container{margin-left:16.666666666666664%;}}
-@media (min-width:768px){.dna-CurrentExpo{padding:200px 0;} .dna-Artists ul li{width:23%;}}@media (max-width:768px){.dna-Artists ul li{width:45%;} h1.heading{font-size:3em;} #posts ul li.tumblr-post .date{left:-55px;width:50px;height:50px;font-size:12px;}}@media (max-width:480px){.dna-Artists ul li{width:48%;}}
+@media (min-width:768px){.dna-CurrentExpo{padding:200px 0;}.dna-CurrentExpo div{font-size:50px;line-height:60px;} .dna-Artists ul li{width:23%;}}@media (max-width:767px){.navbar-nav{margin:5px 0 ;} .navbar-nav>li>a{height:40px;line-height:40px;padding:0 5px;margin:0 5px;} .navbar-nav.dna-Social li a{margin:0 5px;height:40px;width:auto;background:transparent;padding:0 5px;color:inherit;border-bottom-left-radius:4px;border-top-left-radius:4px;border-bottom-right-radius:4px;border-top-right-radius:4px;text-decoration:none;}.navbar-nav.dna-Social li a:hover{background:rgba(0, 0, 0, 0.1);} .dna-Artists ul li{width:45%;} h1.heading{font-size:3em;} #posts ul li.tumblr-post .date{left:-55px;width:50px;height:50px;font-size:12px;} #posts ul li.tumblr-post .permalink{left:-31px;top:28px;font-size:10px;}}@media (max-width:480px){.dna-Artists ul li{width:48%;} #dna-Gallery .entry{width:80%;max-width:80%;min-width:80%;margin-left:10%;}#dna-Gallery .entry.width2{width:100%;max-width:100%;min-width:100%;margin-left:0;}}

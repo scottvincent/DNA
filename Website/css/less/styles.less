@@ -19,10 +19,11 @@ h1.heading{
 .navbar-brand {
     padding: 0 15px;
     color: black;
+    font-weight: 500;
     & img {
         height: @navbar-height;
         padding: 7px 0 9px;
-        margin-right: 5px;
+        margin: 0px 5px 0px 0;
     }
     &:hover{
         color: black;
@@ -37,7 +38,7 @@ h1.heading{
     height: 36px;
     width: 36px;
     background: black;
-    padding: (@navbar-height - 49px) /2 7.25px;
+    padding: (@navbar-height - 44px) /2 0 0 7.25px;
     color: @navbar-bg;
     .border-left-radius(50%);
     .border-right-radius(50%);
@@ -56,7 +57,7 @@ h1.heading{
     .box-shadow(0 @borderlineheight 0 0 @dna-blue);
 }
 .dna-CurrentExpo{
-    padding: 100px 0; 
+    padding: 75px 5px; 
     position: relative;
     font-weight: 700;
     text-transform: uppercase;
@@ -68,10 +69,10 @@ h1.heading{
         line-height: 50px;
     }
     & div{
-        font-size: 50px;
+        font-size: 40px;
         background: black;
         padding: 0;
-        line-height: 60px;
+        line-height: 50px;
         display: inline;
         .box-shadow(0 0 0 5px black);
     }
@@ -84,7 +85,7 @@ h1.heading{
 .dna-EventCard{
     min-height: 200px;
     background: #fff;
-    margin: 5px;
+    margin: 5px 5px 15px 5px;
     padding: 10px;
     .box-sizing(border-box);
     position: relative;
@@ -115,7 +116,7 @@ h1.heading{
     }
     & .date{
        text-align: center;
-       font-size: 26px;
+       font-size: 24px;
        line-height: 28px;
        font-weight: 300;
        margin-bottom: 20px;
@@ -128,6 +129,9 @@ h1.heading{
         background: black;
         margin: -10px;
         padding: 10px;
+        & h4{
+            margin: 0;
+        }
     }
 }
 .dna-Artists {
@@ -257,12 +261,12 @@ h1.heading{
 
 & ul.tumblr-posts{
     padding-left: percentage((2 / @grid-columns));
-    list-style-type: none;   
+    list-style-type: none;  
+    margin-top: 30px;
     & li.tumblr-post{
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         padding: 0px 0px 20px 0px;
-        border-bottom: 1px #ededed dotted;
         clear: both;
         & .short {
             font-size: 36px;
@@ -322,22 +326,31 @@ h1.heading{
             }
         }
         & .permalink {
-          font-size: 10px;
-          float: left;
+          font-size: 11px;
           margin-right: 3px;
+          display: block;
+          position: absolute;
+          left: -45px;
+            top: 48px;
+            text-transform: uppercase;
           & .permalink-text {
-              display: none;
+              display: block;
+          }
+            & .permalink-icon{
+             display: none;
             }
           & a {
               text-decoration: none;
           }
         }
         & .tags {
-            font-size: 10px;
+            font-size: 12px;
             float: left;
+            display: none;
             & .tagged {
                 display: none;
             }
+            
             & ul {
                 list-style-type: none;
                 padding-left: 0px;
@@ -391,9 +404,19 @@ h1.heading{
             & ul.photos {
                 list-style-type: none;
                 padding-left: 0px;
+                display: block;
+                clear: both;
                 & li {
                     float: left;
                     margin-right: 3px;
+                }
+            }
+            & .media {
+                & img{
+                    margin: 0 5px 10px 0;
+                }
+                & .description{
+                    float:left;
                 }
             }
         }
@@ -559,6 +582,10 @@ h1.heading{
 @media (min-width: @screen-tablet){
     .dna-CurrentExpo{
         padding: 200px 0;
+        & div{
+            font-size: 50px;
+            line-height: 60px;
+        }
     }
     .dna-Artists {
          & ul{
@@ -568,7 +595,31 @@ h1.heading{
          }
     }
 }
-@media (max-width: @screen-tablet){
+@media (max-width: @screen-small-max){
+    .navbar-nav{
+        margin: 5px 0 ;
+    }
+    .navbar-nav > li > a{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 5px;
+        margin: 0 5px;
+           
+    }
+    .navbar-nav.dna-Social li a {
+        margin: 0 5px;
+        height: 40px;
+        width: auto;
+        background: transparent;
+        padding: 0 5px;
+        color: inherit;
+        .border-left-radius(4px);
+        .border-right-radius(4px);
+        text-decoration: none;
+        &:hover{
+            background: rgba(0,0,0,0.1);
+        }
+    }
     .dna-Artists {
          & ul{
             & li{
@@ -590,6 +641,11 @@ h1.heading{
                     height: 50px;
                     font-size: 12px;
                 }
+                & .permalink{
+                    left: -31px;
+                    top: 28px;
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -601,6 +657,18 @@ h1.heading{
             & li{
                 width: 48%;
             }
+        }
+    }
+    #dna-Gallery .entry{
+        width: 80%;
+        max-width: 80%;
+        min-width: 80%;
+        margin-left: 10%;
+        &.width2{
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            margin-left: 0;
         }
     }
 }
