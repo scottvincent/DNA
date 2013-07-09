@@ -1,0 +1,111 @@
+@media (min-width: @screen-desktop){
+    .post-container{
+        .make-column-offset(2);
+    }
+    .dna-Artists {
+         & ul{
+            & li{
+                width: 23%;
+            }
+         }
+    }
+}
+@media (min-width: @screen-tablet){
+    .dna-CurrentExpo{
+        padding: 200px 0;
+        & div{
+            font-size: 50px;
+            line-height: 60px;
+        }
+    }
+    .dna-Artists {
+         & ul{
+            & li{
+                width: 23%;
+            }
+         }
+    }
+}
+@media (max-width: @screen-small-max){
+    .navbar-nav{
+        margin: 5px 0 ;
+    }
+    .navbar-nav > li > a{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 5px;
+        margin: 0 5px;
+           
+    }
+    .navbar-nav.dna-Social li a {
+        margin: 0 5px;
+        height: 40px;
+        width: auto;
+        background: transparent;
+        padding: 0 5px;
+        color: inherit;
+        .border-left-radius(4px);
+        .border-right-radius(4px);
+        text-decoration: none;
+        &:hover{
+            background: rgba(0,0,0,0.1);
+        }
+    }
+    .dna-Artists {
+         & ul{
+            & li{
+                width: 45%;
+            }
+         }
+    }
+    h1.heading{
+        font-size: 3em;
+    }
+    #posts{
+    & ul{
+        &.tumblr-posts{}   
+        & li{
+            &.tumblr-post{
+                & .date{
+                    left: -55px;
+                    width: 50px;    
+                    height: 50px;
+                    font-size: 12px;
+                }
+                & .permalink{
+                    left: -31px;
+                    top: 28px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+}
+#dna-Gallery .entry{
+        width: 80%;
+        max-width: 80%;
+        min-width: 80%;
+        margin-left: 10%;
+        &.width2{
+            width: 80%;
+            max-width: 80%;
+            min-width: 80%;
+            margin-left: 10%;
+        }
+    }
+}
+@media (max-width: @screen-phone){
+    .dna-Artists{ 
+        & ul{
+            margin: 10px 0;
+            & li{
+                width: 100%;
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+    .corner-stamp {
+  
+    }
+}
