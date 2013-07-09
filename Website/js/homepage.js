@@ -30,8 +30,19 @@ function showInfo(data, tabletop) {
     var content = "<span>Current Exhibition:</span><br>";
     content+="<div><a href='events.html'>" + exhibition.exhibitiontitle + "</a></div>";
     $(content).appendTo("#exhibition"); 
-    
+    return false;
   })
+  // Populate Event Unit
+  $.each( tabletop.sheets("Events").all(), function(i, events) {
+    var content = "<div class='heading'>Next Event:</div>";
+    content+="<div class='title'>" + events.title + "</div>";
+    content+="<img src='" + events.imageurl + "' />";
+    content+="<div class='date'>" + events.startmon + "<span> " + events.startdd + "</span> - " + events.endmon + " <span>" + events.enddd + "</span></div>";
+    content+="<div class='buttonbg'><a href='events.html' class='btn btn-primary btn-block'><h4>SEE ALL EVENTS</h4></a></div>";
+    $(content).appendTo("#NextEvent"); 
+    return false;
+  })
+
   // Populate Artist Listing
   $.each( tabletop.sheets("Artists").all(), function(i, artists) {
     var content = "<li><a href='#' data-filter='." + artists.classname + "' >";
@@ -43,17 +54,19 @@ function showInfo(data, tabletop) {
   $.each( tabletop.sheets("Artists").all(), function(i, artists) {
     var content = "<div class='artistbio " + artists.classname + " hide'>";
     content+="<h1>" + artists.fullname + "</h1>";
+    content+="<h3>" + artists.location + "</h3>";
     content+="<p>" + artists.description + "</p>";
-    content+="<p>";
-    if (artists.websiteurl != "" ) 
-      content+="<p><a href='" + artists.websiteurl + "'>" + artists.websiteurl + "</a></p>";
+    if (artists.worksavailable == "Yes") 
+      content+="<p><a class='btn btn-success' href='https://docs.google.com/document/d/1V6rWUJ_GpfPWhymgPNZ6iRMnzpLnKI0Zxr-aRzbbrVs/pub' target='_blank'>View Works Available</a></p> ";
     if (artists.facebookurl != "") 
-      content+="<p><a href='" + artists.facebookurl + "'><span class='icon-facebook icon-large'></span></a> ";
+      content+="<div class='dna-Social'><a target='_blank' href='" + artists.facebookurl + "'><span class='icon-facebook icon-large'></span></a></div> ";
     if (artists.twitterhandle != "") 
-      content+="<a href='http://www.twitter.com/" + artists.twitterhandle + "'><span class='icon-twitter icon-large'></span></a> ";
+      content+="<div class='dna-Social'><a target='_blank' href='http://www.twitter.com/" + artists.twitterhandle + "'><span class='icon-twitter icon-large'></span></a></div> ";
     if (artists.youtubeusername != "") 
-      content+="<a href='http://www.youtube.com/" + artists.youtubeusername + "'><span class='icon-youtube icon-large'></span></a> ";
-    content+="</p></div>";
+      content+="<div class='dna-Social'><a target='_blank' href='http://www.youtube.com/" + artists.youtubeusername + "'><span class='icon-youtube icon-large'></span></a></div> ";
+     if (artists.websiteurl != "" ) 
+      content+="<div class='website'><a target='_blank' href='" + artists.websiteurl + "'>" + artists.websiteurl + "</div>";
+    content+="</div>";
     $(content).appendTo("#corner-stamp"); 
   })
   // Populate Images
