@@ -1,3 +1,4 @@
+
 @media (min-width: @screen-desktop){
     .post-container{
         .make-column-offset(2);
@@ -8,6 +9,18 @@
                 width: 23%;
             }
          }
+    }
+    
+    .dna-EventListing{
+        & .dna-EventMargin{
+            .make-column(3);
+            & .dna-EventCard{
+                min-height: 350px;
+            }
+        }
+    }
+    .corner-stamp{
+        width: 40%;
     }
 }
 @media (min-width: @screen-tablet){
@@ -25,6 +38,35 @@
             }
          }
     }
+    .dna-EventListing{
+        & .dna-EventMargin{
+            & .dna-EventCard{
+                min-height: 350px;
+            }
+        }
+    }
+    .dna-Expo{
+        & p{
+            font-size: 18px;
+        }
+        & .date{
+            font-size: 28px;
+        }
+        & .expoTitle{
+            & iframe{
+                height: 160px;
+                width: 50%;
+                margin: 0 25%;
+            }
+        }
+    }
+    .corner-stamp{
+        width: 40%;
+    }
+    .artistbio{
+        width: 100%;
+    }
+    
 }
 @media (max-width: @screen-small-max){
     .navbar-nav{
@@ -49,6 +91,22 @@
         text-decoration: none;
         &:hover{
             background: rgba(0,0,0,0.1);
+        }
+    }
+    .dna-Expo{
+        & .expoImg{
+            padding: 0;
+        }
+        & div.title{
+            font-size: 24px;
+            line-height: 32px;
+        }
+        & p{
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        & .date{
+            font-size: 22px;
         }
     }
     .dna-Artists {
@@ -93,7 +151,9 @@
             margin-left: 10%;
         }
     }
+    
 }
+
 @media (max-width: @screen-phone){
     .dna-Artists{ 
         & ul{
@@ -105,7 +165,23 @@
             }
         }
     }
-    .corner-stamp {
-        width: 100%;
+    .artistbio{
+        width: 170%;
     }
+}
+@media (min-width: @screen-large){
+    .dna-Expo{
+        & p{
+            font-size: 19px;
+            padding: 10px 0;
+        }
+        & .date{
+            font-size: 34px;
+        }
+    }
+    .dna-EventListing{
+        & .dna-EventMargin{
+            .make-column(2);
+        }
+    }  
 }

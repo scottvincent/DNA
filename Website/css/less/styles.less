@@ -57,6 +57,24 @@ h1.heading{
     //border-bottom: @borderlineheight solid @dna-blue;
     .box-shadow(0 @borderlineheight 0 0 @dna-blue);
 }
+.dna-BuildingImg{
+    background: url('../img/building.jpg') center no-repeat;
+    background-size: cover;
+    //border-bottom: @borderlineheight solid @dna-blue;
+    .box-shadow(0 @borderlineheight 0 0 @dna-blue);
+    height: 400px;
+}
+.dna-Map{
+    background: url('http://maps.googleapis.com/maps/api/staticmap?center=123+Dundas+St+london+on&zoom=14&scale=2&size=640x360&maptype=roadmap&markers=color:red%7C123%20Dundas%20St&sensor=false') no-repeat center;
+    height: 400px;
+    background-size: cover;
+}
+.dna-EventExpo{
+    background: center no-repeat;
+    background-size: cover;
+    //border-bottom: @borderlineheight solid @dna-blue;
+
+}
 .dna-CurrentExpo{
     padding: 75px 5px; 
     position: relative;
@@ -81,6 +99,97 @@ h1.heading{
         }
     }
 }
+.dna-Expo{
+    padding: 0px ; 
+    position: relative;
+    & img{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    
+    & .expoTitle{
+        position: absolute;
+        top: 0;
+        padding: 0 20px;
+        left: 0;
+        & iframe{
+            height: 90px;
+            width: 60%;
+            margin: 0 20%;
+        }
+    }
+    & p {
+        margin: 35px 0;
+        font-weight: 500;
+        font-size: 19px;
+    }
+    & .expoSocial{
+        background: #eee;
+        display: inline-block;
+        line-height: 30px;
+        padding: 0 10px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        width: 100%;
+         & .dna-Social {
+            height: 36px;
+            width: 36px;
+            background: black;
+            color: white;
+            position: relative;
+            display: inline-block;
+            .border-left-radius(50%);
+            .border-right-radius(50%);
+            text-decoration: none;
+            padding: 3px 0 0 0;
+            text-align: center;
+            margin: 5px 0 5px 5px;
+            &:hover{
+                background: @brand-primary;
+            }
+            & a{
+                color: white;
+                text-decoration: none;
+            }
+        }
+        .website{
+            display: inline-block;
+            margin-left: 5px;
+            & a {
+                color: black;
+            }
+        }
+    }
+    & span.subtitle{
+        font-size: 20px;
+        background: black;
+        padding: 0 5px;
+        line-height: 50px;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    & div.title{
+        font-size: 40px;
+        background: black;
+        padding: 0;
+        line-height: 50px;
+        display: inline;
+        .box-shadow(0 0 0 5px black);
+        font-weight: 700;
+        text-transform: uppercase;
+        color: white;
+    }
+     & .date{
+       font-size: 34px;
+       font-weight: 300;
+       margin: 10px 0;
+       & span{
+            color: @brand-primary;
+            font-weight: 900;
+       }
+    }
+}
 .dna-NextEvent{
     height: 100%;
     display: inline-block;
@@ -89,13 +198,51 @@ h1.heading{
 .dna-EventCard{
     min-height: 200px;
     background: #fff;
-    margin: 5px 5px 15px 5px;
+    margin: 5px 0px 15px 0px;
     padding: 10px;
     .box-sizing(border-box);
     position: relative;
     vertical-align: bottom;
     text-align: left;
     .box-shadow(5px 5px 0 0 @gray);
+    border-top: 12px solid @dna-red;
+    &.showcase{
+        border-top: 12px solid @dna-blue;    
+        &:before{
+            content: 'SHOWCASE';
+        }
+    }
+    &.benefit{
+        border-top: 12px solid @dna-green;
+         &:before{
+            content: 'BENEFIT';
+        }
+    }
+    &.workshop{
+        border-top: 12px solid @dna-orange;
+         &:before{
+            content: 'WORKSHOP';
+        }
+    }
+    &.private{
+        border-top: 12px solid @dna-yellow;
+         &:before{
+            content: 'PRIVATE';
+        }
+    }
+    &.showcase, &.benefit, &.private, &.workshop{
+        &:before{
+            position: absolute;
+            top: -12px;
+            right: 0;
+            font-weight: 900;
+            line-height: 12px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            letter-spacing: 1px;
+            margin-right: 3px;
+        }
+    }
     & .heading{
         color: @brand-primary;
         font-weight: 700;
@@ -261,10 +408,7 @@ h1.heading{
 }
 .artistbio{
     width: 100%;
-    min-width: 100%;
-    max-width: 100%;
     color: white;
-    float: left;
     color: white;
     padding: 15px;
     & h1{
@@ -299,6 +443,7 @@ h1.heading{
         }
         & a{
             color: black;
+            text-decoration: none;
         }
     }
     .website{
@@ -307,7 +452,7 @@ h1.heading{
     }
 }
 .corner-stamp {
-    width: 40%;
+    width: 60%;
     float: left;
     color: white;
 }
@@ -577,7 +722,13 @@ h1.heading{
         }
     }
 }
-
+.contactform{
+    margin-bottom: 15px;
+    & label{
+        margin: 5px 0;
+        font-weight: 400;
+    }
+}
 .dna-Partners{
     background: @gray-lighter;
     border-top: @borderlineheight solid @dna-yellow;
@@ -588,6 +739,57 @@ h1.heading{
         text-align: center;
         & img{
             margin: 0 5px;
+        }
+    }
+}
+.dna-EventListing{
+    background: @gray-lighter;
+    font-size: 12px;
+    padding: 50px 0;
+    & .title{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    & .date{
+        font-size: 18px;   
+    }
+    & .dna-EventMargin{
+        .make-column(4);
+        & .dna-EventCard{
+            
+            text-align: center;
+            & .dna-Social {
+                height: 30px;
+                width: 30px;
+                background: black;
+                color: white;
+                position: relative;
+                display: inline-block;
+                .border-left-radius(50%);
+                .border-right-radius(50%);
+                text-decoration: none;
+                padding: 5px 0 0 1px;
+                text-align: center;
+                margin: 5px 0 5px 5px;
+                font-size: 15px;
+                &:hover{
+                    background: @brand-primary; 
+                }
+                & a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            .website{
+                display: block;
+                margin: 5px 0;
+                font-weight: 300;
+                font-size: 14px;
+                .text-overflow();
+                & a {
+                    color: black;
+                }
+            }
         }
     }
 }

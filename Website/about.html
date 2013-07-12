@@ -2,7 +2,7 @@
 <html>
   <head>    
 <!-- Website Information -->
-    <title>DNA Artspace</title>
+    <title>DNA Artspace - About</title>
     <meta name="description" content="">
     <meta name="author" content="Scott Vincent IES Group Inc. http://iesgroup.ca">
     <meta name="keywords" content="">
@@ -29,8 +29,6 @@
 <!-- Styles -->
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="css/style.css" rel="stylesheet" media="screen"> <!-- Isotope Styles -->
-    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" /> <!-- Photo Gallery Styles -->
     <link href="css/styles.css" rel="stylesheet" media="screen">
 
   </head>
@@ -45,12 +43,12 @@
         <a class="navbar-brand" href="index.html"><img src="img/DNA-logo.svg" />artspace</a>
         <div class="nav-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html"><span class="hidden-sm"><i class="icon-home icon-large"></i></span><span class="visible-sm">home</span></a></li>
+            <li><a href="index.html"><span class="hidden-sm"><i class="icon-home icon-large"></i></span><span class="visible-sm">home</span></a></li>
             <li><a href="events.html">events</a></li>
-            <li><a href="#artists">artists</a></li>
-            <li><a href="#news">news</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="about.html#contact">contact</a></li>
+            <li><a href="index.html#artists">artists</a></li>
+            <li><a href="index.html#news">news</a></li>
+            <li class="active"><a href="#">about</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
           <ul class="nav navbar-nav pull-right dna-Social">
             <li><a href="#"><span class="icon-facebook icon-large hidden-sm"></span><span class="visible-sm">Facebook</span></a></li>
@@ -62,65 +60,64 @@
     </div>
 
 <!-- Hero Unit --> 
-  <div class="dna-SpaceImg">
-    <div class="container">
-      <div class="row" >
-        <div class="col col-lg-8 col-offset-1 col-sm-7 dna-CurrentExpo" id="exhibition">
+  <div class="dna-BuildingImg">
+    
+  </div>
+
+  <div class="container">
+    <div class="row">
+<!-- About --> 
+      <div class="col col-lg-6" id="about">
+        <h1 class="heading">ABOUT</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet neque sit amet ligula porttitor luctus at quis nisl. Etiam vehicula dolor a tellus mollis, molestie tincidunt nibh consectetur. Suspendisse consequat pellentesque tortor, vulputate dapibus tortor sagittis nec. Integer viverra iaculis ipsum, consectetur viverra tortor interdum at. </p>
+        <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nec nunc nec diam lacinia ultrices. Morbi tincidunt nec felis nec laoreet. Vivamus scelerisque fermentum ligula sit amet euismod. Nunc nisl velit, egestas eget commodo pulvinar, vehicula in nulla. Praesent vitae elementum justo. Morbi lobortis vulputate lorem, at aliquam ligula bibendum eget. </p>
+        <p>Suspendisse potenti. Nam eleifend tristique diam, sed pulvinar ipsum egestas gravida. Cras justo leo, auctor at consectetur id, consequat vitae lacus. Duis velit elit, cursus at ultricies nec, sollicitudin eget magna.</p>
+        <address>
+              123 Dundas St<br>
+              London, ON N6N 6N6<br>
+              <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+
+             <address>
+              <strong>Hours of Operation</strong><br>
+              Mon - Fri <strong>12pm - 9pm</strong><br/>
+              Sat - Sun <strong>9am - 10pm</strong>
+            </address>
+
+            <address>
+              <a href="mailto:#">inquires@dnaartspace.com</a>
+            </address>
+      </div>
+<!-- Contact --> 
+      <div class="col col-lg-6" id="contact">
+        <h1 class="heading">CONTACT</h1>
+        <form class="contactform">
+            <label for="name">Name</label>
+     
+            <input name="name" id="myname" type="text" placeholder="John Smith" required>
           
-        </div>
-        <div class="col col-lg-3 col-sm-4 dna-NextEvent">
-          <div class="hidden-sm" style="height:236px;"></div>
-          <div class="dna-EventCard" id="NextEvent">
+            <label for="email">Email</label>
             
-          </div>
-        </div>
+            <input name="email" id="myemail" type="text" placeholder="email@address.com" required>
+          
+            <label for="message">Message</label>
+           
+            <textarea name="message" id="mymessage" type="text" placeholder="Type your message here" required></textarea>
+
+            <br />
+            <button name="Submit" type="submit" id="submit" class="btn btn-primary">Send Message</button>
+            
+          </form>
       </div>
     </div>
   </div>
-
-<!-- Artists --> 
-    <div class="container" id="artists">
-      <div class="row">
-        <div class="col col-lg-12 dna-Artists">
-          <h1 class="heading">Artists <a class="btn btn-primary btn-small seeall selected hide" data-filter=".entry">See All</a> </h1>
-            <ul class="clearfix" id="artist-buttons"></ul>
-        </div>
-      </div>
-    </div>
-
-<!-- Gallery --> 
-    <div class="dna-BlackBG">
-      <div class="container">
-        <div class="row">
-          <div class="col col-lg-12">
-            <div id="dna-Gallery">
-              <div class="corner-stamp" id="corner-stamp">
-                  
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>  
-
-<!-- Tumblr -->
-    <div class="container" id="news">
-      <div class="row">
-        <div class="col col-lg-12">
-          <h1 class="heading" >News &amp; Blog Feed</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-lg-8 post-container">
-          <div id="loading">Loading...</div>
-          <div id="posts"></div>
-          <div id="pagination"></div>
-          <a href="#" class="btn btn-primary pull-right">See All Posts</a>
-        </div>
-        <div class="col col-lg-2"></div>
-      </div>
-    </div>
-
+<!-- Map --> 
+<a href="http://maps.apple.com/maps?q=123+Dundas+St,+London,+ON,+Canada" target="_blank">
+  <div class="container">
+    <div class="dna-Map">
+    </div>    
+  </div>
+</a>
 <!-- Partners -->  
     <div class="dna-Partners" >
       <div class="container">
@@ -158,10 +155,10 @@
             <ul class="footer-nav">
               <li><a href="index.html">home</a></li>
               <li><a href="events.html">events</a></li>
-              <li><a href="#artists">artists</a></li>
-              <li><a href="#news">news</a></li>
+              <li><a href="index.html#artists">artists</a></li>
+              <li><a href="index.html#news">news</a></li>
               <li><a href="#">about</a></li>
-              <li><a href="#">contact</a></li>
+              <li><a href="#contact">contact</a></li>
             </ul>
           </div>
           <div class="col col-lg-3 col-sm-4">
@@ -206,13 +203,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/tabletop.js"></script>
-    <script type="text/javascript" src="js/jquery.tumblr.js"></script> 
-    <script type="text/javascript" src="js/moment.min.js"></script>   
-    <script type="text/javascript" src="js/jquery.pagination.js"></script>
-    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
     <script type="text/javascript" src="js/scripts.js"></script>
-    <script type="text/javascript" src="js/homepage.js"></script>
+    <script type="text/javascript" src="js/about.js"></script>
 
     <!-- Optionally enable responsive features in IE8 
     <script src="js/respond.js"></script>-->

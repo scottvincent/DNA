@@ -34,6 +34,7 @@ function showInfo(data, tabletop) {
   })
   // Populate Event Unit
   $.each( tabletop.sheets("Events").all(), function(i, events) {
+    $('.dna-EventCard').addClass(events.type);
     var content = "<div class='heading'>Next Event:</div>";
     content+="<div class='title'>" + events.title + "</div>";
     content+="<img src='" + events.imageurl + "' />";
@@ -209,6 +210,10 @@ function showInfo(data, tabletop) {
       });
 
       $container.isotope( 'reLayout' );
+      var target_offset = $("#corner-stamp").offset();
+      var target_top = target_offset.top;
+      //goto that anchor by setting the body scroll top to anchor top
+      $('html, body').animate({scrollTop:target_top}, 500);
       return false;
     });
 
