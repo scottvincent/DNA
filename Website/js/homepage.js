@@ -49,12 +49,12 @@ function showInfo(data, tabletop) {
     var today = moment().format("YYYY MMM DD");
     var content ="<div class='expoContain row'><div class='col col-lg-12 expoTitle'>";
     content+= "<div class='title'>" + events.title + "</div></div>";
-    content+= "<div class='col col-lg-2 expoImg'><img src='" + events.imageurl + "' /></div>"; 
-    content+="<div class='col col-lg-10 expoInfo'>";
+    content+= "<div class='col col-lg-1 col-sm-2 col-3 expoImg'><img src='" + events.imageurl + "' /></div>"; 
+    content+="<div class='col col-lg-11 col-sm-10 col-9 expoInfo'>";
     content+="<div class='date'>" + events.startmon + "<span> " + events.startdd + "</span> - " + events.endmon + " <span>" + events.enddd +"</span>";
     if (events.time != "") 
       content+=" <span>" + events.time + "</span>";
-    content+=" @ <span>DNA Artspace</span></div>";
+    content+=" <div style='display:block' class='visible-sm'></div>@ <span>DNA Artspace</span></div>";
     content+="<p>" + events.description + "</p>";
     if (events.facebookurl || events.twitterhandle || events.youtubeusername || events.websiteurl != "") 
       content+="<div class='expoSocial'>Learn More:";

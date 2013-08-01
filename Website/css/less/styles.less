@@ -39,11 +39,12 @@ h1.heading{
     height: 36px;
     width: 36px;
     background: black;
-    padding: (@navbar-height - 44px) /2 0 0 8.25px;
+    padding: (@navbar-height - 44px) /2 0 0 3.25px;
     color: @navbar-bg;
     .border-left-radius(50%);
     .border-right-radius(50%);
     text-decoration: none;
+    text-align: center;
     &:hover{
         background: @brand-primary;
     }
@@ -217,6 +218,9 @@ h1.heading{
     & img{
         max-width: 100%;
         min-width: 100%;
+    }
+    & .expoImg{
+        margin-top: 12px;
     }
     & .expoTitle{
 
@@ -519,7 +523,12 @@ h1.heading{
     float: left;
     color: white;
 }
-
+.post-container{
+    margin-bottom: 30px;
+    & .btn{
+        margin-left: percentage((2 / @grid-columns));
+    }
+}
 & ul.tumblr-posts{
     padding-left: percentage((2 / @grid-columns));
     list-style-type: none;  
@@ -529,6 +538,9 @@ h1.heading{
         margin-bottom: 50px;
         padding: 0px 0px 20px 0px;
         clear: both;
+        &:last-child{
+            margin-bottom: 10px;
+        }
         & .short {
             font-size: 36px;
             line-height: 40px;
