@@ -10,14 +10,18 @@ function showInfo(data, tabletop) {
     content+= "</a>";
     $(content).appendTo("#partners"); 
   })
-  // Populate Exhibition Unit Current and Future
+  // Populate Exhibition Unit All dates
   $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
     var startDate = exhibition.year + " " + exhibition.startmon + " " + exhibition.startdd;
     var endDate = exhibition.year + " " + exhibition.endmon + " " + exhibition.enddd;
     var today = moment().format("YYYY MMM DD");
+
+
     var content ="<div class='expoContain row'><div class='col col-lg-12 expoTitle'>";
     if (moment(today).isBefore(endDate) && moment(today).isAfter(startDate)) 
       content+= "<span class='subtitle current'>Current Exhibition:</span><br>";
+    if (moment(today).isAfter(endDate) && moment(today).isAfter(startDate)) 
+      content+= "<span class='subtitle past'>Past Exhibition:</span><br>";
     if (moment(today).isBefore(endDate) && moment(today).isBefore(startDate)) 
       content+= "<span class='subtitle'>Upcoming Exhibition:</span><br>";
     content+= "<div class='title'>" + exhibition.exhibitiontitle + "</div></div>";
@@ -25,7 +29,7 @@ function showInfo(data, tabletop) {
     content+="<div class='col col-lg-10 expoInfo'>";
     if (exhibition.youtubeid != "") 
       content+="<div class='col col-lg-5 col-sm-12 pull-right'><div class='vidBox'><div class='vidContent'><iframe width='560' height='315' src='http://www.youtube.com/embed/" + exhibition.youtubeid + "' frameborder='0' allowfullscreen></iframe></div></div></div>";
-    content+="<div class='date'>" + exhibition.startmon + "<span> " + exhibition.startdd + "</span> - " + exhibition.endmon + " <span>" + exhibition.enddd + "</span> @ <span>DNA Artspace</span></div>";
+    content+="<div class='date'>" + exhibition.startmon + "<span> " + exhibition.startdd + "</span> - " + exhibition.endmon + " <span>" + exhibition.enddd + "</span> " + exhibition.year + "<div style='display:block' class='visible-sm'></div>  @ <span>DNA Artspace</span></div>";
     content+="<p>" + exhibition.description + "</p>";
     if (exhibition.facebookurl || exhibition.twitterhandle || exhibition.youtubeusername || exhibition.websiteurl != "") 
       content+="<div class='expoSocial'>Learn More:";
@@ -40,36 +44,40 @@ function showInfo(data, tabletop) {
     if (moment(today).isBefore(endDate) || moment(today).isBefore(startDate)){
       $(content).appendTo("#exhibition"); 
     }
-    
   })
-  // Populate Event Unit
-  $.each( tabletop.sheets("Events").all(), function(i, events) {
-    var startDate = events.year + " " + events.startmon + " " + events.startdd;
-    var endDate = events.year + " " + events.endmon + " " + events.enddd;
+  // Populate Past Exhibitions Unit
+   $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
+    var startDate = exhibition.year + " " + exhibition.startmon + " " + exhibition.startdd;
+    var endDate = exhibition.year + " " + exhibition.endmon + " " + exhibition.enddd;
     var today = moment().format("YYYY MMM DD");
     var content ="<div class='expoContain row'><div class='col col-lg-12 expoTitle'>";
-    content+= "<div class='title'>" + events.title + "</div></div>";
-    content+= "<div class='col col-lg-2 expoImg'><img src='" + events.imageurl + "' /></div>"; 
+    if (moment(today).isBefore(endDate) && moment(today).isAfter(startDate)) 
+      content+= "<span class='subtitle current'>Current Exhibition:</span><br>";
+    if (moment(today).isAfter(endDate) && moment(today).isAfter(startDate)) 
+      content+= "<span class='subtitle past'>Past Exhibition:</span><br>";
+    if (moment(today).isBefore(endDate) && moment(today).isBefore(startDate)) 
+      content+= "<span class='subtitle'>Upcoming Exhibition:</span><br>";
+    content+= "<div class='title'>" + exhibition.exhibitiontitle + "</div></div>";
+    content+= "<div class='col col-lg-2 expoImg'><img src='" + exhibition.imageurl + "' /></div>"; 
     content+="<div class='col col-lg-10 expoInfo'>";
-    content+="<div class='date'>" + events.startmon + "<span> " + events.startdd + "</span> - " + events.endmon + " <span>" + events.enddd +"</span>";
-    if (events.time != "") 
-      content+=" <span>" + events.time + "</span>";
-    content+=" @ <span>DNA Artspace</span></div>";
-    content+="<p>" + events.description + "</p>";
-    if (events.facebookurl || events.twitterhandle || events.youtubeusername || events.websiteurl != "") 
+    if (exhibition.youtubeid != "") 
+      content+="<div class='col col-lg-5 col-sm-12 pull-right'><div class='vidBox'><div class='vidContent'><iframe width='560' height='315' src='http://www.youtube.com/embed/" + exhibition.youtubeid + "' frameborder='0' allowfullscreen></iframe></div></div></div>";
+    content+="<div class='date'>" + exhibition.startmon + "<span> " + exhibition.startdd + "</span> - " + exhibition.endmon + " <span>" + exhibition.enddd + "</span> " + exhibition.year + "<div style='display:block' class='visible-sm'></div> @ <span>DNA Artspace</span></div>";
+    content+="<p>" + exhibition.description + "</p>";
+    if (exhibition.facebookurl || exhibition.twitterhandle || exhibition.youtubeusername || exhibition.websiteurl != "") 
       content+="<div class='expoSocial'>Learn More:";
-    if (events.facebookurl != "") 
-      content+="<div class='dna-Social'><a target='_blank' href='" + events.facebookurl + "'><span class='icon-facebook icon-large'></span></a></div> ";
-    if (events.twitterhandle != "") 
-      content+="<div class='dna-Social'><a target='_blank' href='http://www.twitter.com/" + events.twitterhandle + "'><span class='icon-twitter icon-large'></span></a></div> ";
-    if (events.youtubeusername != "") 
-      content+="<div class='dna-Social'><a target='_blank' href='http://www.youtube.com/" + events.youtubeusername + "'><span class='icon-youtube icon-large'></span></a></div> ";
-    if (events.websiteurl != "" ) 
-      content+="<span class='website'><a target='_blank' href='" + events.websiteurl + "'>Visit Website</span></div></div>";
-    if (moment(today).isBefore(endDate) || moment(today).isBefore(startDate)){
-      $(content).appendTo("#EventListing"); 
+    if (exhibition.facebookurl != "") 
+      content+="<div class='dna-Social'><a target='_blank' href='" + exhibition.facebookurl + "'><span class='icon-facebook icon-large'></span></a></div> ";
+    if (exhibition.twitterhandle != "") 
+      content+="<div class='dna-Social'><a target='_blank' href='http://www.twitter.com/" + exhibition.twitterhandle + "'><span class='icon-twitter icon-large'></span></a></div> ";
+    if (exhibition.youtubeusername != "") 
+      content+="<div class='dna-Social'><a target='_blank' href='http://www.youtube.com/" + exhibition.youtubeusername + "'><span class='icon-youtube icon-large'></span></a></div> ";
+    if (exhibition.websiteurl != "" ) 
+      content+="<span class='website'><a target='_blank' href='" + exhibition.websiteurl + "'>Visit Website</span></div></div>";
+    if (moment(today).isAfter(endDate) && moment(today).isAfter(startDate)){
+      $(content).appendTo("#exhibition"); 
     }
-    
+
   })
 
 
@@ -81,27 +89,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9
 
 Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
- wanted: [ "Events" , "Partners" , "Exhibition" ],
+ wanted: [ "Partners" , "Exhibition" ],
  debug: true } )
 
-function blogDate(){
-    moment().format("MMM, D"); 
-};
 
-// Tumblr
-$(document).ready(function () {
-  $('#posts')
-  .tumblr({
-    url:        'http://massmoca.tumblr.com',
-    pagination: false,
-    loading:    '#loading',
-    perPage:    5,
-    photoSize: 500,
-    videoSize: 500,
-    photoThumbSize: 75,
-    photoLightboxSize: 500,
-    fancybox: false,
-    timeago: false
-  });
-
-});
