@@ -11,6 +11,7 @@ h1.heading{text-transform:uppercase;font-weight:700;font-size:4em;color:#000;}
 .dna-EventExpo{background:center no-repeat;background-size:cover;}
 .dna-CurrentExpo{padding:75px 5px;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;line-height:50px;}
 .dna-CurrentExpo div{font-size:40px;background:black;padding:0;line-height:50px;display:inline;-webkit-box-shadow:0 0 0 5px #000000;box-shadow:0 0 0 5px #000000;}.dna-CurrentExpo div a{color:#fff;}
+.dna-CurrentExpo p{text-transform:none;font-size:2em;margin-top:20px;text-shadow:0 1px 0px rgba(255, 255, 255, 0.5);color:rgba(0, 0, 0, 0.9);}
 .dna-Expo{position:relative;}.dna-Expo div.expoContain{margin-top:50px;margin-bottom:50px;}.dna-Expo div.expoContain:first-child{margin-top:0;}
 .dna-Expo img{max-width:100%;min-width:100%;}
 .dna-Expo .vidBox{position:relative;width:96%;margin:0px 2% 10px;background:black;}.dna-Expo .vidBox:before{content:"";display:block;padding-top:56.25%;}
