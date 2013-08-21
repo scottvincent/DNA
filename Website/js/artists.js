@@ -51,13 +51,17 @@ function showInfo(data, tabletop) {
     $(content).appendTo("#corner-stamp"); 
   })
   // Populate Images
+
   $.each( tabletop.sheets("Art").all(), function(i, art) {
-    var content = "<article class='entry " + art.classname + "'>";
+    var content = "<article class='entry " + art.classname + " ";
+    if (art.featured == "Yes") 
+      content+="featured";
+    content+="'>";
     content+="<a data-rel='prettyPhoto'  title='" + art.artist + " " + art.date + " - " + art.description + "' rel='prettyPhoto[" + art.classname + "]' href='" + art.imageurl + "w1200/'>";
     content+="<img src='" + art.imageurl + "w458/' alt='" + art.title + "' />";
     content+="<div class='dna-artistlink'><div><p class='line1'>" + art.artist + "</p><p class='line2'>" + art.title + ", " + art.date + "</p><p class='line3'>" + art.medium + " (" + art.size + ")</p></div></div>";
-    if (art.available == "Yes") 
-      content+="<div class='available'><div>Available</div></div>";
+    //if (art.available == "Yes") 
+      //content+="<div class='available'><div>Available</div></div>";
     content+="</a>";
     content+="</article>";
     $(content).appendTo("#dna-Gallery"); 
@@ -73,7 +77,7 @@ function showInfo(data, tabletop) {
   var $container = $('#dna-Gallery');
   $container.imagesLoaded( function(){
     $container.isotope({
-      filter: '.entry',
+      filter: '.featured',
       itemSelector : 'article',
       animationOptions: {
         duration: 750,
