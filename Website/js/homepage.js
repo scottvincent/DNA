@@ -82,7 +82,8 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9
 Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
  wanted: [ "Events" , "Partners" , "Exhibition" ],
- debug: true } )
+ proxy: 'https://s3.amazonaws.com/DNADATA',
+ debug: false } )
 
 function blogDate(){
     moment().format("MMM, D"); 
