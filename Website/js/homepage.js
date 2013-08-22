@@ -11,7 +11,7 @@ function showInfo(data, tabletop) {
     $(content).appendTo("#partners"); 
   })
   // Populate Exhibition Unit Current and Future
-  $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
+  /*$.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
     var startDate = exhibition.year + " " + exhibition.startmon + " " + exhibition.startdd;
     var endDate = exhibition.year + " " + exhibition.endmon + " " + exhibition.enddd;
     var today = moment().format("YYYY MMM DD");
@@ -41,9 +41,9 @@ function showInfo(data, tabletop) {
       $(content).appendTo("#exhibition"); 
     }
     
-  })
+  })*/
   // Populate Event Unit
-  $.each( tabletop.sheets("Events").all(), function(i, events) {
+ /* $.each( tabletop.sheets("Events").all(), function(i, events) {
     var startDate = events.year + " " + events.startmon + " " + events.startdd;
     var endDate = events.year + " " + events.endmon + " " + events.enddd;
     var today = moment().format("YYYY MMM DD");
@@ -71,7 +71,7 @@ function showInfo(data, tabletop) {
     }
     
   })
-
+*/
 
 }
 

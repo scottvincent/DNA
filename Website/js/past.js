@@ -11,7 +11,7 @@ function showInfo(data, tabletop) {
     $(content).appendTo("#partners"); 
   })
   // Populate Exhibition Unit All dates
-  $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
+/*  $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
     var startDate = exhibition.year + " " + exhibition.startmon + " " + exhibition.startdd;
     var endDate = exhibition.year + " " + exhibition.endmon + " " + exhibition.enddd;
     var today = moment().format("YYYY MMM DD");
@@ -44,9 +44,9 @@ function showInfo(data, tabletop) {
     if (moment(today).isBefore(endDate) || moment(today).isBefore(startDate)){
       $(content).appendTo("#exhibition"); 
     }
-  })
+  })*/
   // Populate Past Exhibitions Unit
-   $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
+   /*$.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
     var startDate = exhibition.year + " " + exhibition.startmon + " " + exhibition.startdd;
     var endDate = exhibition.year + " " + exhibition.endmon + " " + exhibition.enddd;
     var today = moment().format("YYYY MMM DD");
@@ -78,7 +78,7 @@ function showInfo(data, tabletop) {
       $(content).appendTo("#exhibition"); 
     }
 
-  })
+  })*/
 
 
 }
@@ -90,6 +90,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9
 Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
  wanted: [ "Partners" , "Exhibition" ],
- debug: true } )
+ proxy: 'https://s3.amazonaws.com/DNADATA',
+ debug: false } )
 
 
