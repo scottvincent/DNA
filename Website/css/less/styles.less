@@ -20,9 +20,10 @@ h1.heading{
 .navbar-brand {
     padding: 0 15px;
     color: black;
-    font-weight: 500;
     & img {
+        font-size: @navbar-height;
         height: @navbar-height;
+        width: @navbar-height*2;
         padding: 7px 0 9px;
         margin: 0px 5px 0px 0;
     }
@@ -32,15 +33,51 @@ h1.heading{
     }
 }
 .navbar-toggle{
-    
+    margin: (@navbar-height / 2)-30px 0;
+    margin-right: 15px;
+    height: 60px;
 }
-.navbar-nav.dna-Social li a {
+.navbar-nav{
+    & li{
+        & a{
+            color: black;
+        }
+        &.active{
+            & a{
+                background: @brand-primary;
+                color: white;
+            }
+        }    
+    }
+}
+.dna-Social{
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    & .btn-default{
+        background: black;
+        font-weight: 700;
+        color: white;
+        border-color: white;
+        font-size: 0.85em;
+        width: 32%;
+        border-color: transparent;
+        &:hover{
+            background: @brand-primary;
+        }
+        & i{
+            margin-right: 5px;
+            font-weight: normal;
+        }
+    }
+}
+/*.dna-Social li a {
     margin: (@navbar-height - 37px) /2 3px;
     height: 36px;
     width: 36px;
     background: black;
     padding: (@navbar-height - 44px) /2 0 0 3.25px;
-    color: @navbar-bg;
+    color: @navbar-default-bg;
     .border-left-radius(50%);
     .border-right-radius(50%);
     text-decoration: none;
@@ -48,7 +85,7 @@ h1.heading{
     &:hover{
         background: @brand-primary;
     }
-}
+}*/
 
 //Hero Unit
 
@@ -845,7 +882,7 @@ h1.heading{
         font-size: 18px;   
     }
     & .dna-EventMargin{
-        .make-column(4);
+        .make-lg-column(4);
         & .dna-EventCard{
             
             text-align: center;
@@ -906,8 +943,11 @@ h1.heading{
             & a{
                 color: white;
                 &:hover{
-                    color: @navbar-bg;
+                    color: @navbar-default-bg;
                     text-decoration: none;
+                }
+                & i{
+                    margin-right: 5px;
                 }
             }
         }
