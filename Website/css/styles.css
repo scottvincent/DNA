@@ -1,21 +1,22 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
 
 h1.heading{text-transform:uppercase;font-weight:700;font-size:4em;color:#000;}
-.navbar{margin-bottom:0;font-weight:600;border-bottom:8px solid #cc0018;}
+.navbar{margin-bottom:0;font-weight:600;border-bottom:8px solid #cc0018;background:black;}
 .navbar-brand{padding:0 15px;color:black;}.navbar-brand img{font-size:90px;height:90px;width:180px;padding:7px 0 9px;margin:0px 5px 0px 0;}
-.navbar-brand:hover{color:black;background:rgba(0, 0, 0, 0.1);}
-.navbar-toggle{margin:15px 0;margin-right:15px;height:60px;}
-.navbar-nav li a{color:black;}
+.navbar-brand:hover{color:black;background:rgba(255, 255, 255, 0.3);}
+.navbar-toggle{margin:15px 0;margin-right:15px;height:60px;color:white;}
+.navbar-nav li a{color:white;}
+.navbar-nav li:hover a{background:#ffffff;color:black;}
 .navbar-nav li.active a{background:#cc0018;color:white;}
-.dna-Social{margin-bottom:5px;width:100%;text-align:center;}.dna-Social .btn-default{background:black;font-weight:700;color:white;border-color:white;font-size:0.85em;width:32%;border-color:transparent;}.dna-Social .btn-default:hover{background:#cc0018;}
+.dna-Social{margin-bottom:5px;width:100%;text-align:center;}.dna-Social .btn-default{background:white;font-weight:700;color:black;border-color:white;font-size:0.85em;width:32%;}.dna-Social .btn-default:hover{background:#cc0018;border-color:#cc0018;color:white;}
 .dna-Social .btn-default i{margin-right:5px;font-weight:normal;}
-.dna-SpaceImg{background:url('https://lh5.googleusercontent.com/-DMop2j11bpY/UdwSOuMfyWI/AAAAAAAAASs/X3dgV-9O_WM/w1055-h791-no/SpaceImg.jpg') center no-repeat;background-size:cover;}
+.dna-SpaceImg{background:url('../img/SpaceImg.jpg') center no-repeat;background-size:cover;}
 .dna-BuildingImg{background:url('../img/building.jpg') center no-repeat;background-size:cover;height:400px;}.dna-BuildingImg .tagline{color:rgba(255, 255, 255, 0.3);font-weight:900;font-size:8em;vertical-align:bottom;line-height:1em;}
 .dna-Map{background:url('http://maps.googleapis.com/maps/api/staticmap?center=123+Dundas+St+london+on&zoom=14&scale=2&size=640x360&maptype=roadmap&markers=color:0xCC0018%7C123%20Dundas%20St&sensor=false&style=saturation:-100') no-repeat center;height:400px;background-size:cover;}
 .dna-EventExpo{background:center no-repeat;background-size:cover;}
 .dna-CurrentExpo{padding:75px 5px;position:relative;font-weight:700;text-transform:uppercase;color:white;}.dna-CurrentExpo span{font-size:20px;background:black;padding:0 5px;line-height:50px;}
 .dna-CurrentExpo div{font-size:40px;background:black;padding:0;line-height:50px;display:inline;-webkit-box-shadow:0 0 0 5px #000000;box-shadow:0 0 0 5px #000000;}.dna-CurrentExpo div a{color:#fff;}
-.dna-CurrentExpo p{text-transform:none;font-size:2em;margin-top:20px;text-shadow:0 1px 0px rgba(255, 255, 255, 0.5);color:rgba(0, 0, 0, 0.9);}
+.dna-CurrentExpo p{text-transform:none;font-size:2em;margin-top:20px;text-shadow:0 1px 0px rgba(0, 0, 0, 0.8);color:white;}
 .dna-Expo{position:relative;}.dna-Expo div.expoContain{margin-top:50px;margin-bottom:50px;}.dna-Expo div.expoContain:first-child{margin-top:0;}
 .dna-Expo img{max-width:100%;min-width:100%;}
 .dna-Expo .vidBox{position:relative;width:96%;margin:0px 2% 10px;background:black;}.dna-Expo .vidBox:before{content:"";display:block;padding-top:56.25%;}

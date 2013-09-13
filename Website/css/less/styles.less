@@ -16,6 +16,7 @@ h1.heading{
     margin-bottom: 0;
     font-weight: 600;
     border-bottom: @borderlineheight solid @dna-red;
+    background: black;
 }
 .navbar-brand {
     padding: 0 15px;
@@ -29,18 +30,25 @@ h1.heading{
     }
     &:hover{
         color: black;
-        background: rgba(0,0,0,0.1);
+        background: rgba(255,255,255,0.3);
     }
 }
 .navbar-toggle{
     margin: (@navbar-height / 2)-30px 0;
     margin-right: 15px;
     height: 60px;
+    color: white;
 }
 .navbar-nav{
     & li{
         & a{
-            color: black;
+            color: white;
+        }
+        &:hover{
+            & a{
+                background: rgba(255,255,255,1);
+                color: black;
+            }
         }
         &.active{
             & a{
@@ -55,15 +63,17 @@ h1.heading{
     width: 100%;
     text-align: center;
     & .btn-default{
-        background: black;
+        background: white;
         font-weight: 700;
-        color: white;
+        color: black;
         border-color: white;
         font-size: 0.85em;
         width: 32%;
-        border-color: transparent;
+        
         &:hover{
             background: @brand-primary;
+            border-color: @brand-primary;
+            color: white;
         }
         & i{
             margin-right: 5px;
@@ -90,7 +100,7 @@ h1.heading{
 //Hero Unit
 
 .dna-SpaceImg{
-    background: url('https://lh5.googleusercontent.com/-DMop2j11bpY/UdwSOuMfyWI/AAAAAAAAASs/X3dgV-9O_WM/w1055-h791-no/SpaceImg.jpg') center no-repeat;
+    background: url('../img/SpaceImg.jpg') center no-repeat;
     background-size: cover;
 }
 .dna-BuildingImg{
@@ -143,8 +153,8 @@ h1.heading{
         text-transform: none;
         font-size: 2em;
         margin-top: 20px;
-        text-shadow: 0 1px 0px rgba(255,255,255,0.5);
-        color: rgba(0,0,0,0.9);
+        text-shadow: 0 1px 0px rgba(0,0,0,0.8);
+        color: white;
         
     
     }
