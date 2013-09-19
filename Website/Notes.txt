@@ -1,4 +1,0 @@
-Changes to Standard Bootstrap Files
-
-1) bootstrap.less > line 31> glyphicons.less replaced with font-awesome.less
-2) font awesome definitions changed to newest 3.2 version

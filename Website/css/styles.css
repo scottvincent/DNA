@@ -1,5 +1,6 @@
 /* CSS crunched with Crunch - http://crunchapp.net/ */
 
+html{overflow-x:hidden;}
 h1.heading{text-transform:uppercase;font-weight:700;font-size:4em;color:#000;}
 .navbar{margin-bottom:0;font-weight:600;border-bottom:8px solid #cc0018;background:black;}
 .navbar-brand{padding:0 15px;color:black;}.navbar-brand img{font-size:90px;height:90px;width:180px;padding:7px 0 9px;margin:0px 5px 0px 0;}
@@ -32,7 +33,7 @@ h1.heading{text-transform:uppercase;font-weight:700;font-size:4em;color:#000;}
 .dna-Eventlist img{max-width:100%;min-width:100%;}
 .dna-Eventlist .expoImg{margin-top:12px;}
 .dna-Eventlist p{font-weight:400;font-size:14px;padding:0;}
-.dna-Eventlist .expoSocial{line-height:30px;margin-bottom:10px;font-weight:600;color:rgba(0, 0, 0, 0.5);font-size:16px;}.dna-Eventlist .expoSocial .dna-Social{position:relative;display:inline-block;text-align:center;margin:5px 0 5px 10px;}.dna-Eventlist .expoSocial .dna-Social a{color:black;text-decoration:none;}.dna-Eventlist .expoSocial .dna-Social a:hover{color:#cc0018;}
+.dna-Eventlist .expoSocial{line-height:30px;margin-bottom:10px;font-weight:600;color:rgba(0, 0, 0, 0.5);font-size:16px;}.dna-Eventlist .expoSocial .dna-Social{position:relative;display:inline-block;text-align:center;margin:5px 0 5px 10px;width:auto;}.dna-Eventlist .expoSocial .dna-Social a{color:black;text-decoration:none;}.dna-Eventlist .expoSocial .dna-Social a:hover{color:#cc0018;}
 .dna-Eventlist .expoSocial .website{display:inline-block;margin-left:5px;}.dna-Eventlist .expoSocial .website a{color:black;}
 .dna-Eventlist span.subtitle{font-size:14px;background:black;-webkit-box-shadow:0 0 0 5px #000000;box-shadow:0 0 0 5px #000000;padding:0 5px;line-height:50px;color:white;font-weight:700;text-transform:uppercase;}.dna-Eventlist span.subtitle.current{background:#cc0018;-webkit-box-shadow:0 0 0 5px #cc0018;box-shadow:0 0 0 5px #cc0018;}
 .dna-Eventlist span.subtitle.past{background:#999999;-webkit-box-shadow:0 0 0 5px #999999;box-shadow:0 0 0 5px #999999;}
@@ -107,4 +108,16 @@ ul.tumblr-posts li.tumblr-post.tumblr-post-conversation .conversation ul li.even
 .dna-Footer{background:black;min-height:150px;padding:15px 0;color:white;}.dna-Footer .copyright{font-size:11px;text-align:center;}
 .dna-Footer .footer-nav{color:white;text-transform:uppercase;font-weight:600;list-style:none;padding:0;text-align:left;}.dna-Footer .footer-nav li{height:26px;}.dna-Footer .footer-nav li a{color:white;}.dna-Footer .footer-nav li a:hover{color:#f8f8f8;text-decoration:none;}
 .dna-Footer .footer-nav li a i{margin-right:5px;}
+#mc_embed_signup h2{font-weight:bold;padding:0;margin:15px 0;font-size:1.4em;}
+#mc_embed_signup input{-webkit-appearance:none;}
+#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
+#mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
+#mc_embed_signup .small-meta{font-size:11px;}
+#mc_embed_signup .nowrap{white-space:nowrap;}
+#mc_embed_signup .clear{clear:none;display:inline;}
+#mc_embed_signup label{display:block;font-size:16px;padding-bottom:10px;font-weight:bold;}#mc_embed_signup label.error{display:block;float:none;width:auto;margin-left:1.05em;text-align:left;padding:.5em 0;}
+#mc_embed_signup div#mce-responses{float:left;top:-1.4em;padding:0em .5em 0em .5em;overflow:hidden;width:90%;margin:0 5%;clear:both;}
+#mc_embed_signup div.response{margin:1em 0;padding:1em .5em .5em 0;font-weight:bold;float:left;top:-1.5em;z-index:1;width:80%;}
+#mc_embed_signup #mce-error-response{display:none;}
+#mc_embed_signup #mce-success-response{color:#529214;display:none;}
 @media (min-width:768px){.dna-CurrentExpo{padding:200px 0;}.dna-CurrentExpo div{font-size:50px;line-height:60px;} .dna-Artists ul li{width:23%;} .dna-EventListing .dna-EventMargin .dna-EventCard{min-height:350px;} .dna-Expo .expoTitle iframe{height:160px;width:50%;margin:0 25%;} .corner-stamp{width:40%;} .artistbio{width:100%;}}@media (min-width:992px){.dna-Social{margin-bottom:0px;display:block;width:auto;margin-top:27px;}.dna-Social .btn-default{font-size:1em;width:36px;height:36px;margin:0 5px 0 0;border-radius:18px;text-align:center;padding-left:0;padding-right:0;}.dna-Social .btn-default i{margin-right:0px;line-height:22px !important;}}@media (min-width:1200px){}@media (max-width:767px){.navbar-nav{margin:5px 0 ;} .navbar-nav>li>a{height:40px;line-height:40px;padding:0 5px;margin:0 5px;} .dna-Expo .expoImg,.dna-Eventlist .expoImg{padding:0;} .dna-Expo div.title,.dna-Eventlist div.title{font-size:28px;line-height:32px;} .dna-Expo p,.dna-Eventlist p{font-size:16px;} .dna-Expo .date,.dna-Eventlist .date{font-size:22px;} .dna-Expo span.subtitle,.dna-Eventlist span.subtitle{font-size:12px;line-height:36px;} .dna-Artists ul{margin:10px 0;}.dna-Artists ul li{width:45%;width:100%;font-size:20px;line-height:24px;} h1.heading{font-size:3em;} #posts ul li.tumblr-post .date{left:-55px;width:50px;height:50px;font-size:12px;} #posts ul li.tumblr-post .permalink{left:-31px;top:28px;font-size:10px;} #dna-Gallery .entry{width:80%;max-width:80%;min-width:80%;margin-left:10%;}#dna-Gallery .entry.width2{width:80%;max-width:80%;min-width:80%;margin-left:10%;} .dna-BuildingImg .tagline{font-size:8em;line-height:1em;} .artistbio{width:170%;}}@media (min-width:768px) and (max-width:991px){}@media (min-width:992px) and (max-width:1199px){}@media (min-width:1200px){.dna-Artists ul li{width:23%;} .dna-EventListing .dna-EventMargin{position:relative;min-height:1px;padding-left:15px;padding-right:15px;} .dna-EventListing .dna-EventMargin .dna-EventCard{min-height:350px;} .corner-stamp{width:40%;} .dna-BuildingImg .tagline{font-size:10em;line-height:400px;}}@media (min-width:1200px) and (min-width:1200px){.post-container{margin-left:16.666666666666664%;}}@media (min-width:1200px) and (min-width:1200px){.dna-EventListing .dna-EventMargin{float:left;width:16.666666666666664%;}}
