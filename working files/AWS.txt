@@ -1,0 +1,3 @@
+Access: AKIAIDQ63YUWPLXGXJ7Q
+Secret: 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
+Bucket: DNADATA

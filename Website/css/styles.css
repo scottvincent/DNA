@@ -95,6 +95,7 @@ ul.tumblr-posts li.tumblr-post.tumblr-post-conversation .conversation ul li span
 ul.tumblr-posts li.tumblr-post.tumblr-post-conversation .conversation ul li span.user-3{color:#00aa00;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-conversation .conversation ul li.odd{background-color:#f4f4f4;}
 ul.tumblr-posts li.tumblr-post.tumblr-post-conversation .conversation ul li.even{background-color:#e8e8e8;}
+ul.tumblr-posts img{max-width:100%;}
 .pagination{font-size:80%;}.pagination a{text-decoration:none;border:solid 1px #AAE;color:#15B;display:block;float:left;padding:0.3em 0.5em;margin-right:5px;margin-bottom:5px;min-width:1em;text-align:center;}
 .pagination span{display:block;float:left;padding:0.3em 0.5em;margin-right:5px;margin-bottom:5px;min-width:1em;text-align:center;}
 .pagination .current{background:#26B;color:#fff;border:solid 1px #AAE;}.pagination .current.prev,.pagination .current.next{color:#999;border-color:#999;background:#fff;}
