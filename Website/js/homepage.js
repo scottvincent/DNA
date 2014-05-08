@@ -1,8 +1,29 @@
 // DNA Homepage Scripts
 
+//Format Blog Date
+  function blogDate(){
+      moment().format("MMM, D"); 
+  };
+
+  // Tumblr Blog Data
+  $(document).ready(function () {
+    $('#posts')
+    .tumblr({
+      url:        'http://dnaartspace.tumblr.com',
+      pagination: false,
+      loading:    '#loading',
+      perPage:    5,
+      photoSize: 500,
+      videoSize: 500,
+      photoThumbSize: 75,
+      photoLightboxSize: 500,
+      fancybox: false,
+      timeago: false
+    });
+  });
 
 // Populate Data from Google Spreadsheet
-function showInfo(data, tabletop) {
+/*function showInfo(data, tabletop) {
   // Populate Partners Listing
   $.each( tabletop.sheets("Partners").all(), function(i, partners) {
     var content = "<a href='" + partners.partnerlink + "' target='_blank' >";
@@ -11,7 +32,7 @@ function showInfo(data, tabletop) {
     $(content).appendTo("#partners"); 
   })
   // Populate Exhibition Unit Current and Future
-  /*$.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
+  $.each( tabletop.sheets("Exhibition").all(), function(i, exhibition) {
     var startDate = exhibition.year + " " + exhibition.startmon + " " + exhibition.startdd;
     var endDate = exhibition.year + " " + exhibition.endmon + " " + exhibition.enddd;
     var today = moment().format("YYYY MMM DD");
@@ -41,9 +62,9 @@ function showInfo(data, tabletop) {
       $(content).appendTo("#exhibition"); 
     }
     
-  })*/
+  })
   // Populate Event Unit
- /* $.each( tabletop.sheets("Events").all(), function(i, events) {
+  $.each( tabletop.sheets("Events").all(), function(i, events) {
     var startDate = events.year + " " + events.startmon + " " + events.startdd;
     var endDate = events.year + " " + events.endmon + " " + events.enddd;
     var today = moment().format("YYYY MMM DD");
@@ -71,7 +92,7 @@ function showInfo(data, tabletop) {
     }
     
   })
-*/
+
 
 }
 
@@ -83,26 +104,5 @@ Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
  wanted: [ "Events" , "Partners" , "Exhibition" ],
  proxy: 'https://s3.amazonaws.com/DNADATA',
- debug: false } )
-
-function blogDate(){
-    moment().format("MMM, D"); 
-};
-
-// Tumblr
-$(document).ready(function () {
-  $('#posts')
-  .tumblr({
-    url:        'http://dnaartspace.tumblr.com',
-    pagination: false,
-    loading:    '#loading',
-    perPage:    5,
-    photoSize: 500,
-    videoSize: 500,
-    photoThumbSize: 75,
-    photoLightboxSize: 500,
-    fancybox: false,
-    timeago: false
-  });
-
-});
+ debug: false } 
+*/

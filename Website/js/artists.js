@@ -66,13 +66,6 @@ function showInfo(data, tabletop) {
     content+="</article>";
     $(content).appendTo("#dna-Gallery"); 
   })
-  // Populate Partners Listing
-  $.each( tabletop.sheets("Partners").all(), function(i, partners) {
-    var content = "<a href='" + partners.partnerlink + "' target='_blank' >";
-    content+= "<img src='" + partners.imageurl + "' alt='" + partners.partnername + "' />";
-    content+= "</a>";
-    $(content).appendTo("#partners"); 
-  })
 
   var $container = $('#dna-Gallery');
   $container.imagesLoaded( function(){
@@ -247,7 +240,7 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9
 
 Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
- wanted: [ "Artists", "Art" , "Partners" ],
+ wanted: [ "Artists", "Art" ],
  proxy: 'https://s3.amazonaws.com/DNADATA',
  debug: false } )
 
