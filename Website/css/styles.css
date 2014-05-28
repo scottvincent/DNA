@@ -734,9 +734,6 @@ ul.tumblr-posts li.tumblr-post.tumblr-post-photo ul.photos li {
 ul.tumblr-posts li.tumblr-post.tumblr-post-photo .media img {
   margin: 0 5px 10px 0;
 }
-ul.tumblr-posts li.tumblr-post.tumblr-post-photo .media .description {
-  float: left;
-}
 ul.tumblr-posts li.tumblr-post.tumblr-post-link span.description {
   font-size: 13px;
   font-weight: normal;
@@ -1172,11 +1169,6 @@ ul.tumblr-posts img {
   .dna-BuildingImg .tagline {
     font-size: 10em;
     line-height: 400px;
-  }
-}
-@media (min-width: 1200px) and (min-width: 1200px) {
-  .post-container {
-    margin-left: 16.666666666666664%;
   }
 }
 @media (min-width: 1200px) and (min-width: 1200px) {
