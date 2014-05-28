@@ -4,13 +4,8 @@ html {
 h1.heading {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 3em;
+  font-size: 4em;
   color: #000;
-}
-hr {
-  border-bottom: 4px double #cc0018;
-  opacity: 0.4;
-  filter: alpha(opacity=40);
 }
 .navbar {
   margin-bottom: 0;
