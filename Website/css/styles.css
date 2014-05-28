@@ -4,8 +4,13 @@ html {
 h1.heading {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 4em;
+  font-size: 3em;
   color: #000;
+}
+hr {
+  border-bottom: 4px double #cc0018;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
 }
 .navbar {
   margin-bottom: 0;
@@ -838,10 +843,13 @@ ul.tumblr-posts img {
   margin: 5px 0;
   font-weight: 400;
 }
+.contact-photos {
+  width: 100%;
+  margin-bottom: 1em;
+}
 .dna-Partners {
   background: #eeeeee;
-  min-height: 200px;
-  padding-bottom: 10px;
+  padding-bottom: 30px;
   margin-top: 10px;
 }
 .dna-Partners .logos {
@@ -1113,9 +1121,6 @@ ul.tumblr-posts img {
     width: 100%;
     font-size: 20px;
     line-height: 24px;
-  }
-  h1.heading {
-    font-size: 3em;
   }
   #posts ul li.tumblr-post .date {
     left: -55px;

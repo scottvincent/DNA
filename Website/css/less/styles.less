@@ -9,10 +9,13 @@ html{
 h1.heading{
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 4em;
+    font-size: 3em;
     color: #000;    
 }
-
+hr{
+    border-bottom: 4px double @brand-primary;
+    .opacity(0.4);
+}
 //Navbar
 .navbar{
     margin-bottom: 0;
@@ -876,10 +879,13 @@ h1.heading{
         font-weight: 400;
     }
 }
+.contact-photos{
+    width: 100%;
+    margin-bottom: 1em;
+}
 .dna-Partners{
     background: @gray-lighter;
-    min-height: 200px;
-    padding-bottom: 10px;
+    padding-bottom: 30px;
     margin-top: 10px;
     & .logos{
         text-align: center;
