@@ -1114,6 +1114,9 @@ ul.tumblr-posts img {
     font-size: 20px;
     line-height: 24px;
   }
+  h1.heading {
+    font-size: 3em;
+  }
   #posts ul li.tumblr-post .date {
     left: -55px;
     width: 50px;
