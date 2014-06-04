@@ -238,16 +238,16 @@ h1.heading {
   line-height: 50px;
   display: inline;
   font-weight: 300;
-  text-transform: uppercase;
+  margin-top: 5px;
 }
 .dna-Expo .date {
-  font-size: 25px;
-  font-weight: 300;
+  font-size: 20px;
+  font-weight: 400;
   margin: 10px 0;
 }
 .dna-Expo .date span {
   color: #cc0018;
-  font-weight: 900;
+  font-weight: 700;
 }
 .dna-Eventlist {
   position: relative;
@@ -861,9 +861,6 @@ ul.tumblr-posts img {
   font-size: 18px;
   line-height: 22px;
 }
-.dna-EventListing .date {
-  font-size: 18px;
-}
 .dna-EventListing .dna-EventMargin {
   position: relative;
   min-height: 1px;
@@ -1088,6 +1085,7 @@ ul.tumblr-posts img {
   .dna-Expo .expoImg,
   .dna-Eventlist .expoImg {
     padding: 0;
+    margin-bottom: 5px;
   }
   .dna-Expo div.title,
   .dna-Eventlist div.title {
@@ -1100,7 +1098,7 @@ ul.tumblr-posts img {
   }
   .dna-Expo .date,
   .dna-Eventlist .date {
-    font-size: 22px;
+    font-size: 18px;
   }
   .dna-Expo span.subtitle,
   .dna-Eventlist span.subtitle {
