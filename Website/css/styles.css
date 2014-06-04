@@ -208,9 +208,6 @@ h1.heading {
   display: inline-block;
   margin-left: 5px;
 }
-.dna-Expo .expoSocial .website a {
-  color: black;
-}
 .dna-Expo span.subtitle {
   font-size: 14px;
   background: black;
@@ -246,7 +243,6 @@ h1.heading {
   margin: 10px 0;
 }
 .dna-Expo .date span {
-  color: #cc0018;
   font-weight: 700;
 }
 .dna-Eventlist {
@@ -295,9 +291,6 @@ h1.heading {
 .dna-Eventlist .expoSocial .website {
   display: inline-block;
   margin-left: 5px;
-}
-.dna-Eventlist .expoSocial .website a {
-  color: black;
 }
 .dna-Eventlist span.subtitle {
   font-size: 14px;
@@ -908,9 +901,6 @@ ul.tumblr-posts img {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-.dna-EventListing .dna-EventMargin .dna-EventCard .website a {
-  color: black;
 }
 .dna-Footer {
   background: black;
