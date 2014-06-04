@@ -8,9 +8,9 @@ html{
 }
 h1.heading{
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3.5em;
-    color: #000;    
+    font-weight: 400;
+    font-size: 3em;
+    color: @navbar-background;    
 }
 
 //Navbar
@@ -18,7 +18,7 @@ h1.heading{
     margin-bottom: 0;
     font-weight: 600;
     border-bottom: @borderlineheight solid @brand-primary;
-    background: black;
+    background: @navbar-background;
 }
 .navbar-brand {
     padding: 0 15px;
@@ -32,7 +32,7 @@ h1.heading{
     }
     &:hover{
         color: black;
-        background: rgba(255,255,255,0.3);
+        .opacity(0.7);
     }
 }
 .navbar-toggle{
@@ -48,8 +48,8 @@ h1.heading{
         }
         &:hover{
             & a{
-                background: rgba(255,255,255,1);
-                color: black;
+                background: rgba(255,255,255,0);
+                color: rgba(255,255,255,0.7);
             }
         }
         &.active{
@@ -67,39 +67,23 @@ h1.heading{
     & .btn-default{
         background: white;
         font-weight: 700;
-        color: black;
-        border-color: white;
+        background: @link-color;
+        border-color: @link-color;
+        color: white;
         font-size: 0.85em;
         width: 32%;
-        
-        &:hover{
-            background: @brand-primary;
-            border-color: @brand-primary;
-            color: white;
+        &:hover{ 
+           color: @navbar-background;
+           border-color: white;
+           background: white;
         }
         & i{
             margin-right: 5px;
             font-weight: normal;
+
         }
     }
 }
-
-/*.dna-Social li a {
-    margin: (@navbar-height - 37px) /2 3px;
-    height: 36px;
-    width: 36px;
-    background: black;
-    padding: (@navbar-height - 44px) /2 0 0 3.25px;
-    color: @navbar-default-bg;
-    .border-left-radius(50%);
-    .border-right-radius(50%);
-    text-decoration: none;
-    text-align: center;
-    &:hover{
-        background: @brand-primary;
-    }
-}*/
-
 //Hero Unit
 
 .dna-SpaceImg{
@@ -119,7 +103,7 @@ h1.heading{
     }
 }
 .dna-Map{
-    background: url('http://maps.googleapis.com/maps/api/staticmap?center=123+Dundas+St+london+on&zoom=14&scale=2&size=640x360&maptype=roadmap&markers=color:0xCC0018%7C123%20Dundas%20St&sensor=false&style=saturation:-100') no-repeat center;
+    background: url('http://maps.googleapis.com/maps/api/staticmap?center=123+Dundas+St+london+on&zoom=14&scale=2&size=640x360&maptype=roadmap&markers=color:0xA71D1A%7C123%20Dundas%20St&sensor=false&style=saturation:-100') no-repeat center;
     height: 400px;
     background-size: cover;
     margin-top: 1em;
@@ -239,23 +223,11 @@ h1.heading{
         }
     }
     & span.subtitle{
-        font-size: 14px;
-        background: black;
-        .box-shadow(0 0 0 5px black);
-        
+        font-size: 1.6em;
         padding: 0 5px;
-        line-height: 50px;
-        color: white;
-        font-weight: 700;
+        color: @brand-primary;
+        font-weight: 500;
         text-transform: uppercase;
-        &.current{
-            background: @brand-primary;
-            .box-shadow(0 0 0 5px @brand-primary);
-        }
-        &.past{
-            background: @brand-info;
-            .box-shadow(0 0 0 5px @brand-info);
-        }
     }
     & div.title{
         font-size: 32px;
@@ -327,28 +299,16 @@ h1.heading{
             margin-left: 5px;
             
             & a {
-                
+
             }
         }
     }
     & span.subtitle{
-        font-size: 14px;
-        background: black;
-        .box-shadow(0 0 0 5px black);
-        
+        font-size: 1.6em;
         padding: 0 5px;
-        line-height: 50px;
-        color: white;
-        font-weight: 700;
+        color: @brand-primary;
+        font-weight: 500;
         text-transform: uppercase;
-        &.current{
-            background: @brand-primary;
-            .box-shadow(0 0 0 5px @brand-primary);
-        }
-        &.past{
-            background: @brand-info;
-            .box-shadow(0 0 0 5px @brand-info);
-        }
     }
     & div.title{
         font-size: 32px;
@@ -632,7 +592,7 @@ h1.heading{
             color: #444444;
             padding: 0px 0px 5px 0px;
             & a {
-                color: @brand-primary;
+                color: @link-color;
                 text-decoration: none;
             }
         }
@@ -642,7 +602,7 @@ h1.heading{
             width: 90px;    
             height: 90px;
             color: #fff;
-            background: black;
+            background: @navbar-background;
             .border-top-radius(50%);
             .border-bottom-radius(50%);
             text-align: center;
@@ -661,7 +621,7 @@ h1.heading{
                 border-bottom: none;  
                 text-transform: uppercase;
                 & span{
-                    color: @brand-primary;
+                    color: white;
                     font-size: 2em;
                     font-weight: 700;
                     line-height: 0.9em;
@@ -716,7 +676,7 @@ h1.heading{
             margin-top: 10px;
             padding: 0px 0px 5px 0px;
             & a {
-                color: @brand-primary;
+                color: @link-color;
             }
         }
         & .caption {
@@ -724,7 +684,7 @@ h1.heading{
             margin-top: 10px;
             padding: 0px 0px 5px 0px;
             & a {
-                color: @brand-primary;
+                color: @link-color;
             }
         }
         & .post-footer {
@@ -835,7 +795,6 @@ h1.heading{
         max-width: 100%;
     }
 }
-
 .pagination {
     font-size: 80%;
     & a {
@@ -941,11 +900,11 @@ h1.heading{
     }
 }
 .dna-Footer{
-    background: black;
+    background: @navbar-background;
     min-height: 150px;
-    padding: 15px 0;
+    padding: 15px 0 5px;
     color: white;
-    .box-shadow(0 1000px 0 1000px black);
+    .box-shadow(0 1000px 0 1000px @navbar-background);
     & .copyright{
         font-size: 11px;
         text-align: center;
@@ -965,11 +924,41 @@ h1.heading{
                     color: @navbar-default-bg;
                     text-decoration: none;
                 }
-                & i{
-                    margin-right: 5px;
+            }
+            &.footer-social{
+                margin-bottom: 5px;
+                width: 100%;
+                text-align: left;
+                height: 36px;
+                & .btn-default{
+                    font-size: 1em;
+                    width: 36px;
+                    height: 36px;
+                    margin: 0 5px 0 0;
+                    border-radius: 18px;
+                    text-align: center;
+                    padding-left: 0;
+                    padding-right: 0;
+                    
+                    background: @link-color;
+                    border-color: @link-color;
+                    color: white;
+                    & i{
+                        margin-right: 0px;
+                        line-height: 22px !important;
+                    }
+                    &:hover{
+                        color: @navbar-background;
+                        border-color: white;
+                        background: white;
+                    }
                 }
             }
         }
+        
+    }
+    & a{
+        color: lighten(@link-color, 15%);
     }
 }
 
