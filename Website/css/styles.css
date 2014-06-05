@@ -128,11 +128,17 @@ h1.heading {
   text-shadow: 0 1px 0px rgba(0, 0, 0, 0.8);
   color: white;
 }
+.expoSubHeading {
+  font-size: 1.6em;
+  color: #a71d1a;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 .dna-Expo {
   position: relative;
 }
 .dna-Expo div.expoContain {
-  margin-top: 50px;
+  margin-top: 5px;
   margin-bottom: 50px;
 }
 .dna-Expo div.expoContain:first-child {
@@ -166,6 +172,12 @@ h1.heading {
   width: 100%;
   height: 100%;
 }
+.dna-Expo .expoTitle {
+  font-size: 1.6em;
+  color: #a71d1a;
+  font-weight: 500;
+  text-transform: uppercase;
+}
 .dna-Expo p {
   font-weight: 400;
   font-size: 14px;
@@ -195,20 +207,13 @@ h1.heading {
   display: inline-block;
   margin-left: 5px;
 }
-.dna-Expo span.subtitle {
-  font-size: 1.6em;
-  padding: 0 5px;
-  color: #a71d1a;
-  font-weight: 500;
-  text-transform: uppercase;
-}
 .dna-Expo div.title {
   font-size: 32px;
   padding: 0;
   line-height: 50px;
   display: inline;
   font-weight: 300;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 .dna-Expo .date {
   font-size: 20px;
@@ -217,6 +222,88 @@ h1.heading {
 }
 .dna-Expo .date span {
   font-weight: 700;
+}
+.dna-PastExpo,
+.dna-PastGalleries {
+  padding-bottom: 3em;
+}
+.dna-PastExpo .pastContain,
+.dna-PastGalleries .pastContain {
+  margin-top: 0.5em;
+}
+.dna-PastExpo .pastImg,
+.dna-PastGalleries .pastImg {
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 100%;
+}
+.dna-PastExpo .pastImg img,
+.dna-PastGalleries .pastImg img {
+  min-height: 100%;
+  width: 100%;
+}
+.dna-PastExpo .pastInfo .title,
+.dna-PastGalleries .pastInfo .title {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.3em;
+  margin-top: 0.5em;
+  display: block;
+  margin-bottom: 0.2em;
+}
+.dna-PastExpo .pastInfo .date,
+.dna-PastGalleries .pastInfo .date {
+  color: #444444;
+  font-size: 1.1em;
+}
+.dna-PastGalleries {
+  padding-bottom: 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+.dna-PastGalleries .pastLeft img {
+  min-height: 0;
+  width: 100%;
+}
+.dna-PastGalleries .pastLeft p {
+  font-size: 0.9em;
+}
+.dna-PastGalleries .pastInfo .title {
+  font-size: 2.2em;
+  font-weight: 400;
+}
+.dna-PastGalleries .pastInfo .date {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin: 0.5em 0;
+}
+.dna-PastGalleries .carousel {
+  text-align: right;
+}
+.dna-PastGalleries .carousel img {
+  width: 100%;
+}
+.dna-PastGalleries .carousel .carousel-caption {
+  position: relative;
+  left: 0;
+  text-align: left;
+  right: 0;
+  color: #000;
+  text-shadow: none;
+  font-size: 0.9em;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  height: auto;
+  padding-bottom: 0;
+}
+.dna-PastGalleries .carousel .carousel-control {
+  position: relative;
+  text-align: right;
+  background: none;
+  text-shadow: none;
+  color: #000;
+  font-size: 1em;
+  margin: 0 0 0 0.5em;
+  line-height: 2em;
 }
 .dna-Eventlist {
   position: relative;
@@ -1123,6 +1210,14 @@ ul.tumblr-posts img {
   }
   .artistbio {
     width: 170%;
+  }
+  .dna-PastGalleries .carousel .carousel-control {
+    width: 49.5%;
+    margin: 0;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    font-size: 1.2em;
   }
 }
 @media (min-width: 1200px) {
