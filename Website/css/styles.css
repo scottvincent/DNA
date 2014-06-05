@@ -953,6 +953,7 @@ ul.tumblr-posts img {
   min-height: 150px;
   padding: 15px 0 5px;
   color: white;
+  overflow: hidden;
   -webkit-box-shadow: 0 1000px 0 1000px #444444;
   box-shadow: 0 1000px 0 1000px #444444;
 }
