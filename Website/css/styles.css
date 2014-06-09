@@ -62,6 +62,7 @@ h1.heading {
 .dna-Social .btn-default:hover {
   background: #8ab6cd;
   border-color: #8ab6cd;
+  color: white;
 }
 .dna-Social .btn-default i {
   margin-right: 5px;
@@ -1000,7 +1001,7 @@ ul.tumblr-posts img {
   line-height: 22px !important;
 }
 .dna-Footer .footer-nav li.footer-social .btn-default:hover {
-  color: #444444;
+  color: white;
   background: #8ab6cd;
   border-color: #8ab6cd;
 }
