@@ -275,13 +275,13 @@ h1.heading {
   font-size: 1.4em;
   margin: 0.5em 0;
 }
-.dna-PastGalleries .carousel {
+.carousel {
   text-align: right;
 }
-.dna-PastGalleries .carousel img {
+.carousel img {
   width: 100%;
 }
-.dna-PastGalleries .carousel .carousel-caption {
+.carousel .carousel-caption {
   position: relative;
   left: 0;
   text-align: left;
@@ -294,7 +294,7 @@ h1.heading {
   height: auto;
   padding-bottom: 0;
 }
-.dna-PastGalleries .carousel .carousel-control {
+.carousel .carousel-control {
   position: relative;
   text-align: right;
   background: none;
@@ -1008,6 +1008,13 @@ ul.tumblr-posts img {
 .dna-Footer a {
   color: #8ab6cd;
 }
+.loading {
+  text-align: center;
+}
+.loading img {
+  min-width: 36px;
+  height: 36px;
+}
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
 #mc_embed_signup h2 {
   font-weight: bold;
@@ -1210,7 +1217,7 @@ ul.tumblr-posts img {
   .artistbio {
     width: 170%;
   }
-  .dna-PastGalleries .carousel .carousel-control {
+  .carousel .carousel-control {
     width: 49%;
     margin: 0;
     display: inline-block;

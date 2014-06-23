@@ -303,34 +303,35 @@ h1.heading{
             margin: 0.5em 0;
         }
     }
-    & .carousel{
+    
+}
+.carousel{
+    text-align: right;
+    & img{
+        width: 100%;
+    }
+    & .carousel-caption{
+        position: relative;
+        left: 0;
+        text-align: left;
+        right: 0;
+        color: #000;
+        text-shadow: none;
+        font-size: 0.9em;
+        margin-top: 0.3em;
+        margin-bottom: 0.3em;
+        height: auto;
+        padding-bottom: 0;
+    }
+    .carousel-control{
+        position: relative;
         text-align: right;
-        & img{
-            width: 100%;
-        }
-        & .carousel-caption{
-            position: relative;
-            left: 0;
-            text-align: left;
-            right: 0;
-            color: #000;
-            text-shadow: none;
-            font-size: 0.9em;
-            margin-top: 0.3em;
-            margin-bottom: 0.3em;
-            height: auto;
-            padding-bottom: 0;
-        }
-        .carousel-control{
-            position: relative;
-            text-align: right;
-            background: none;
-            text-shadow: none;
-            color: #000;
-            font-size: 1em;
-            margin: 0 0 0 0.5em;
-            line-height: 2em;
-        }
+        background: none;
+        text-shadow: none;
+        color: #000;
+        font-size: 1em;
+        margin: 0 0 0 0.5em;
+        line-height: 2em;
     }
 }
 .dna-Eventlist{
@@ -1047,6 +1048,13 @@ h1.heading{
         color: @link-color;
     }
     
+}
+.loading{
+    text-align: center;
+    & img{
+        min-width: 36px;
+        height: 36px;
+    }
 }
 
 /* MailChimp Form Embed Code - Slim - 08/17/2011 */
