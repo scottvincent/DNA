@@ -19,9 +19,10 @@ function showInfo(data, tabletop) {
         content += "<div id='gallery" + count + "' class='moreInfo' style='display: none;'>";
         content+= "<div id='pastgallery" + count + "' class='carousel slide' data-ride='carousel'>";
         content+= "<a class='left carousel-control' href='#pastgallery" + count + "' data-slide='prev'>Prev</a><a class='right carousel-control' href='#pastgallery" + count + "' data-slide='next'>Next</a>";
-        //content+= "<a href='#pastgallery" + count + "' data-slide='next'>";
+        content+= "<a href='#pastgallery" + count + "' data-slide='next'>";
         content+= "<div class='carousel-inner' data-title='" + exhibition.exhibitiontitle + "'></div>";
-        //content+= "</a>";
+        content+= "</a> <button type='button' data-toggle='modal' data-target='#contact-modal' class='btn btn-xs btn-info availability' >Availability & Pricing</button>";
+
         content+= "</div>";
         content+= "</div>";
       }
@@ -62,9 +63,9 @@ function showInfo(data, tabletop) {
       content+= exhibition.longdescription;
       content+= "<div id='pastgallery" + count + "' class='carousel slide' data-ride='carousel'>";
       content+= "<a class='left carousel-control' href='#pastgallery" + count + "' data-slide='prev'>Prev</a><a class='right carousel-control' href='#pastgallery" + count + "' data-slide='next'>Next</a>";
-      //content+= "<a href='#pastgallery" + count + "' data-slide='next'>";
+      content+= "<a href='#pastgallery" + count + "' data-slide='next'>";
       content+= "<div class='carousel-inner' data-title='" + exhibition.exhibitiontitle + "'></div>";
-      //content+= "</a>";
+      content+= "</a>";
       content+= "</div>";
       content+= "</div>";
       content+= "<div class='pastLeft col col-sm-4 col-sm-pull-8'>";
@@ -84,7 +85,7 @@ function showInfo(data, tabletop) {
     if (egallery.description != '')
       content2+= "<div class='carousel-caption'>" + egallery.description + " ";  
     if (egallery.available === 'Yes')
-      content2+= "<a href='contact.html' class='btn btn-xs pull-right btn-info availability'>Availability & Pricing</a></div>";                      
+      content2+= "";                      
     content2+= "</div>";
     $(content2).appendTo('.carousel-inner[ data-title="' + egallery.exhibition + '"]');
     $('.carousel-inner[ data-title="' + egallery.exhibition + '"] .item').first().addClass('active');

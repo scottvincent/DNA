@@ -176,10 +176,14 @@
       </div>
     </div>
 
-    <div class="modal fade" class="contact-modal">
+    <div class="modal fade" id="contact-modal">
       <div class="modal-dialog modal-sm">
         <div class="modal-content">
-          <h1 class="heading">CONTACT US</h1>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h3 class="heading">Availability &amp; Pricing</h1>
+          </div>
+          <div class="modal-body">
             <script type="text/javascript">var submitted=false;</script>
             <iframe name="hidden_iframe" id="hidden_iframe"
             style="display:none;" onload="if(submitted){thankyou()}"></iframe>
@@ -200,7 +204,8 @@
                 </div>
                 <input type="submit" name="submit" value="Send Message" id="ss-submit" class="btn btn-primary">
               </fieldset>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
