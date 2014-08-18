@@ -245,6 +245,10 @@ h1.heading {
   min-height: 100%;
   width: 100%;
 }
+.dna-PastExpo .pastInfo,
+.dna-PastGalleries .pastInfo {
+  height: 7em;
+}
 .dna-PastExpo .pastInfo .title,
 .dna-PastGalleries .pastInfo .title {
   font-size: 1.2em;
