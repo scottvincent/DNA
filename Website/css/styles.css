@@ -247,7 +247,7 @@ h1.heading {
 }
 .dna-PastExpo .pastInfo,
 .dna-PastGalleries .pastInfo {
-  height: 7em;
+  min-height: 7em;
 }
 .dna-PastExpo .pastInfo .title,
 .dna-PastGalleries .pastInfo .title {
