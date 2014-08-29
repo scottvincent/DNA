@@ -1,0 +1,1010 @@
+//Starting Point Styles IES Group http://iesgroup.on.ca
+
+@import "variables.less";
+@import "mixins.less";
+
+html{
+    overflow-x: hidden;
+}
+h1.heading{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4em;
+    color: #000;    
+}
+
+//Navbar
+.navbar{
+    margin-bottom: 0;
+    font-weight: 600;
+    border-bottom: @borderlineheight solid @dna-red;
+    background: red;
+}
+
+.navbar-brand {
+    padding: 0 15px;
+    color: black;
+    & img {
+        font-size: @navbar-height;
+        height: @navbar-height;
+        width: @navbar-height*2;
+        padding: 7px 0 9px;
+        margin: 0px 5px 0px 0;
+    }
+    &:hover{
+        color: black;
+        background: rgba(255,255,255,0.3);
+    }
+}
+.navbar-toggle{
+    margin: (@navbar-height / 2)-30px 0;
+    margin-right: 15px;
+    height: 60px;
+    color: white;
+}
+.navbar-nav{
+    & li{
+        & a{
+            color: white;
+        }
+        &:hover{
+            & a{
+                background: rgba(255,255,255,1);
+                color: black;
+            }
+        }
+        &.active{
+            & a{
+                background: @brand-primary;
+                color: white;
+            }
+        }    
+    }
+}
+
+.dna-Social{
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+    & .btn-default{
+        background: white;
+        font-weight: 700;
+        color: black;
+        border-color: white;
+        font-size: 0.85em;
+        width: 32%;
+        
+        &:hover{
+            background: @brand-primary;
+            border-color: @brand-primary;
+            color: white;
+        }
+        & i{
+            margin-right: 5px;
+            font-weight: normal;
+        }
+    }
+}
+
+/*.dna-Social li a {
+    margin: (@navbar-height - 37px) /2 3px;
+    height: 36px;
+    width: 36px;
+    background: black;
+    padding: (@navbar-height - 44px) /2 0 0 3.25px;
+    color: @navbar-default-bg;
+    .border-left-radius(50%);
+    .border-right-radius(50%);
+    text-decoration: none;
+    text-align: center;
+    &:hover{
+        background: @brand-primary;
+    }
+}*/
+
+//Hero Unit
+
+.dna-SpaceImg{
+    background: url('../img/SpaceImg.jpg') center no-repeat;
+    background-size: cover;
+}
+.dna-BuildingImg{
+    background: url('../img/building.jpg') center no-repeat;
+    background-size: cover;
+    height: 400px;
+    & .tagline{
+        color: rgba(255, 255, 255, 0.3);
+        font-weight: 900;
+        font-size: 8em;
+        vertical-align: bottom;
+        line-height: 1em;
+    }
+}
+.dna-Map{
+    background: url('http://maps.googleapis.com/maps/api/staticmap?center=123+Dundas+St+london+on&zoom=14&scale=2&size=640x360&maptype=roadmap&markers=color:0xCC0018%7C123%20Dundas%20St&sensor=false&style=saturation:-100') no-repeat center;
+    height: 400px;
+    background-size: cover;
+}
+.dna-EventExpo{
+    background: center no-repeat;
+    background-size: cover;
+
+}
+.dna-CurrentExpo{
+    padding: 75px 5px; 
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    & span{
+        font-size: 20px;
+        background: black;
+        padding: 0 5px;
+        line-height: 50px;
+    }
+    & div{
+        font-size: 40px;
+        background: black;
+        padding: 0;
+        line-height: 50px;
+     //   display: inline;
+     //   .box-shadow(0 0 0 5px black);
+     //   & a{
+            color: #fff;   
+        }
+        
+    }
+    & p{
+        text-transform: none;
+        font-size: 2em;
+        margin-top: 20px;
+        text-shadow: 0 1px 0px rgba(0,0,0,0.8);
+        color: white;
+        
+    
+    }
+}
+.dna-Expo{
+    position: relative;
+    & div.expoContain{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    & img{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    & .vidBox{
+        position: relative;
+    	width: 96%;		/* desired width */
+        margin: 0px 2% 10px;
+        background: black;
+        &:before{
+        	content: "";
+        	display: block;
+        	//padding-top: 100%; 	/* ratio of 1:1 */
+            padding-top: 56.25%; /* ratio of 16:9 */
+        }
+        & .vidContent{
+            position:  absolute;
+            top: 0;
+        	left: 0;
+        	bottom: 0;
+        	right: 0;
+            & iframe{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    & .expoTitle{
+
+    }
+    & .expoInfo{
+
+    }
+    & p {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0;
+    }
+    & .expoSocial{
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: rgba(0,0,0,0.5);
+         & .dna-Social {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin: 5px 0 5px 10px;
+            width: auto;
+            & a{
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color: @brand-primary;
+                }
+            }
+        }
+        .website{
+            display: inline-block;
+            margin-left: 5px;
+            
+            & a {
+                color: black;
+            }
+        }
+    }
+    & span.subtitle{
+        font-size: 14px;
+        background: black;
+        .box-shadow(0 0 0 5px black);
+        
+        padding: 0 5px;
+        line-height: 50px;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        &.current{
+            background: @brand-primary;
+            .box-shadow(0 0 0 5px @brand-primary);
+        }
+        &.past{
+            background: @brand-info;
+            .box-shadow(0 0 0 5px @brand-info);
+        }
+    }
+    & div.title{
+        font-size: 32px;
+        padding: 0;
+        line-height: 50px;
+        display: inline;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    & .date{
+       font-size: 25px;
+       font-weight: 300;
+       margin: 10px 0;
+       & span{
+            color: @brand-primary;
+            font-weight: 900;
+       }
+    }
+}
+.dna-Eventlist{
+    position: relative;
+    & div.expoContain{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
+    & img{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    & .expoImg{
+        margin-top: 12px;
+    }
+    & .expoTitle{
+
+    }
+    & .expoInfo{
+
+    }
+    & p {
+        font-weight: 400;
+        font-size: 14px;
+        padding: 0;
+    }
+    & .expoSocial{
+        line-height: 30px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: rgba(0,0,0,0.5);
+        font-size: 16px;
+         & .dna-Social {
+            position: relative;
+            display: inline-block;
+            text-align: center;
+            margin: 5px 0 5px 10px;
+            width: auto;
+            & a{
+                color: black;
+                text-decoration: none;
+                &:hover{
+                    color: @brand-primary;
+                }
+            }
+        }
+        .website{
+            display: inline-block;
+            margin-left: 5px;
+            
+            & a {
+                color: black;
+            }
+        }
+    }
+    & span.subtitle{
+        font-size: 14px;
+        background: black;
+        .box-shadow(0 0 0 5px black);
+        
+        padding: 0 5px;
+        line-height: 50px;
+        color: white;
+        font-weight: 700;
+        text-transform: uppercase;
+        &.current{
+            background: @brand-primary;
+            .box-shadow(0 0 0 5px @brand-primary);
+        }
+        &.past{
+            background: @brand-info;
+            .box-shadow(0 0 0 5px @brand-info);
+        }
+    }
+    & div.title{
+        font-size: 32px;
+        padding: 0;
+        line-height: 50px;
+        display: inline;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+    & .date{
+       font-size: 25px;
+       font-weight: 300;
+       margin: 10px 0;
+       & span{
+            color: @brand-primary;
+            font-weight: 900;
+       }
+    }
+}
+.dna-NextEvent{
+    height: 100%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.dna-EventCard{
+    min-height: 200px;
+    background: #fff;
+    margin: 5px 0px 15px 0px;
+    padding: 10px;
+    .box-sizing(border-box);
+    position: relative;
+    vertical-align: bottom;
+    text-align: left;
+    & .heading{
+        color: @brand-primary;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+    & .title{
+        color: black;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 26px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    & img{
+        max-height: 100px;
+        max-width: 100px;
+        display: block;
+        margin: 10px auto;
+
+    }
+    & .date{
+       text-align: center;
+       font-size: 24px;
+       line-height: 28px;
+       font-weight: 300;
+       margin-bottom: 20px;
+       & span{
+            color: @brand-primary;
+            font-weight: 900;
+       }
+    }
+    & .buttonbg{
+        background: black;
+        margin: -10px;
+        padding: 10px;
+        & h4{
+            margin: 0;
+        }
+    }
+}
+.dna-Artists {
+    & ul{
+    margin: 30px 0;
+    padding: 0;
+    list-style: none;
+        & li{
+            width: 23%;
+            float: left;
+            font-size: 24px;
+            font-weight: 500;
+            margin: 3px 2% 0 0;
+            line-height: 32px;
+            cursor: pointer;
+            &:hover{
+                background: rgba(0,0,0,1);
+                color: white;
+            }
+            & a{
+                display: block;
+                color: @gray-dark;
+                padding: 5px 5px;
+                text-decoration: none;
+                &:hover{
+                    color: white;
+                }
+                &.selected{
+                    background: rgba(0,0,0,1);
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.dna-BlackBG{
+    background: black;
+    padding: 0 0 10px 0;
+}
+#dna-Gallery{
+    height: 500px;   
+    width: 100%;
+    padding: 5px 0;
+    & .entry {
+        width: 20%;
+        min-width: 20%;
+        max-width: 20%;
+        padding: 5px;
+        position: relative;
+        cursor: pointer;
+        & img{
+            max-width: 100%;
+            min-width: 100%;
+        }
+        &.width2{
+            width: 40%;
+            min-width: 40%;
+            max-width: 40%;
+        }
+        & .dna-artistlink {
+            position: absolute;
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            .transition(all 0.2s ease-in-out);
+            .opacity(0);
+            top: 0;
+            left: 0;
+            & div{
+                width: 100%;
+                text-align: left;
+                background: fade(black, 50%);
+                padding: 5%;
+                bottom: 0;
+                position: absolute;
+                & p{
+                    color: #fff;
+                    margin: 0;
+                    display: block;
+                    &.line1{
+                        font-weight: 500;
+                        font-size: 1.1em;
+                    }
+                    &.line2{
+                        font-weight: 400;
+                        font-size: 1.1em;
+                        font-style: italic;
+                    }
+                    &.line3{
+                        font-size: 0.9em;
+                        font-weight: 300;
+                    }
+                }
+            }
+            &:hover{
+                .opacity(1)
+            }
+        }
+        
+        & .available {
+            overflow: hidden;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            pointer-events: none;
+            & div{
+                background: @dna-green;
+                position: absolute;
+                font-size: 12px;
+                line-height: 16px;
+                top: 20px;
+                right: -20px;
+                color: #fff;
+                .rotate(45deg);
+                padding: 0px 20px;
+            }
+        }
+    }
+}
+.artistbio{
+    width: 100%;
+    color: white;
+    color: white;
+    padding: 15px;
+    & h1{
+        margin-bottom: 5px;
+    }
+    & h3{
+        margin-top: 0;
+        font-size: 28px;
+    }
+    & p{
+        font-size: 14px;
+        line-height: 18px;
+    }
+    & a{
+        color: #fff;
+    }
+    & .dna-Social {
+        height: 36px;
+        width: 36px;
+        background: white;
+        color: black;
+        position: relative;
+        display: inline-block;
+        .border-left-radius(50%);
+        .border-right-radius(50%);
+        text-decoration: none;
+        padding: 9px 0 0 0;
+        text-align: center;
+        margin-right: 5px;
+        &:hover{
+            background: @brand-primary;
+        }
+        & a{
+            color: black;
+            text-decoration: none;
+        }
+    }
+    .website{
+        display: inline-block;
+        margin-right: 5px;
+    }
+}
+.corner-stamp {
+    width: 60%;
+    float: left;
+    color: white;
+}
+.post-container{
+    margin-bottom: 30px;
+    & .btn{
+        margin-left: percentage((2 / @grid-columns));
+    }
+}
+& ul.tumblr-posts{
+    padding-left: percentage((2 / @grid-columns));
+    list-style-type: none;  
+    margin-top: 30px;
+    & li.tumblr-post{
+        position: relative;
+        margin-bottom: 50px;
+        padding: 0px 0px 20px 0px;
+        clear: both;
+        &:last-child{
+            margin-bottom: 10px;
+        }
+        & .short {
+            font-size: 36px;
+            line-height: 40px;
+            letter-spacing: -1px;
+            font-weight: bold;
+        }
+        & .medium {
+            font-size: 25px;
+            line-height: 27px;
+            letter-spacing: -1px;
+        }
+        &.long {
+            font-size: 16px;
+            line-height: 20px;
+        }
+        & .title {
+            letter-spacing: -1px;
+            margin: 10px 0px 5px 0px;
+            color: #444444;
+            padding: 0px 0px 5px 0px;
+            & a {
+                color: @brand-primary;
+                text-decoration: none;
+            }
+        }
+        & .date{
+            position: absolute;
+            left: -105px;
+            width: 90px;    
+            height: 90px;
+            color: #fff;
+            background: black;
+            .border-top-radius(50%);
+            .border-bottom-radius(50%);
+            text-align: center;
+            top: 0;
+            padding: 0.3em;
+            font-size: 22px;
+            float: left;
+            margin-right: 3px;
+            & .posted{
+                display: none;
+                color: #555555;
+            }
+            & .timeago{
+                line-height: 1em;
+                font-weight: 100;
+                border-bottom: none;  
+                text-transform: uppercase;
+                & span{
+                    color: @brand-primary;
+                    font-size: 2em;
+                    font-weight: 700;
+                    line-height: 0.9em;
+                }
+            }
+        }
+        & .permalink {
+          font-size: 11px;
+          margin-right: 3px;
+          display: block;
+          position: absolute;
+          left: -45px;
+            top: 48px;
+            text-transform: uppercase;
+          & .permalink-text {
+              display: block;
+          }
+            & .permalink-icon{
+             display: none;
+            }
+          & a {
+              text-decoration: none;
+          }
+        }
+        & .tags {
+            font-size: 12px;
+            float: left;
+            display: none;
+            & .tagged {
+                display: none;
+            }
+            
+            & ul {
+                list-style-type: none;
+                padding-left: 0px;
+                display: inline;
+                & li {
+                    float: left;
+                    margin-right: 3px;
+                    & a {
+                        text-decoration: none;
+                    }
+                    & .tag-commas {
+                        display: none;
+                    }
+                }
+                
+            }
+        }
+        & .link {
+            color: #444444;
+            margin-top: 10px;
+            padding: 0px 0px 5px 0px;
+            & a {
+                color: @brand-primary;
+            }
+        }
+        & .caption {
+            color: #444444;
+            margin-top: 10px;
+            padding: 0px 0px 5px 0px;
+            & a {
+                color: @brand-primary;
+            }
+        }
+        & .post-footer {
+            clear: both;
+        }
+        &.tumblr-post-regular {
+            font-size: 12px;
+            color: #444444;
+            line-height: 17px;
+            & blockquote {
+                font-style: italic;
+                border-left: solid 2px #444444;
+                padding-left: 10px;
+            }
+            & .description img[align=left] {
+                margin: 0px 3px 3px 0px;
+            }
+        }
+        &.tumblr-post-photo {
+            & ul.photos {
+                list-style-type: none;
+                padding-left: 0px;
+                display: block;
+                clear: both;
+                & li {
+                    float: left;
+                    margin-right: 3px;
+                }
+            }
+            & .media {
+                & img{
+                    margin: 0 5px 10px 0;
+                }
+                & .description{
+                    float:left;
+                }
+            }
+        }
+        &.tumblr-post-link { 
+            & span.description {
+                font-size: 13px;
+                font-weight: normal;
+                letter-spacing: -1px;
+                color: #444444;
+            }
+        }
+        &.tumblr-post-quote { 
+            & .quote {
+                margin: 0 0 1.5em;
+                & .quote-text {
+                    font-weight: bold;
+                    color: #888888;
+                    border-left: solid 5px @brand-primary;
+                    padding-left: 10px;
+                    & a {
+                        color: #888888;
+                    }
+                }
+                & .source {
+                    font-size: 16px;
+                    font-weight: Bold;
+                    color: #555555;
+                    margin-top: 5px;
+                    & a {
+                        color: #555555;
+                    }
+                }
+            }
+        }
+        &.tumblr-post-conversation {
+            & .conversation {
+                margin: 0 0 1.5em;
+                & ul {
+                    list-style-type: none;
+                    margin: 0px;
+                    padding: 0px 0px 0px 1px;
+                    border-left: solid 5px #bbbbbb;
+                    & li {
+                        font-size: 12px;
+                        padding: 4px 10px 4px 8px;
+                        color: #444444;
+                        margin-bottom: 1px;
+                        & span.label {
+                            font-weight: bold;
+                            margin-right: 3px;
+                        }
+                        & span.user-1 {
+                            color: #cc0000;
+                        }
+                        & span.user-2 {
+                            color: #0000cc;
+                        }
+                        & span.user-3 {
+                            color: #00aa00;
+                        }
+                        &.odd {
+                            background-color: #f4f4f4;
+                        }
+                        &.even {
+                            background-color: #e8e8e8;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    & img{
+        max-width: 100%;
+    }
+}
+
+
+
+.pagination {
+    font-size: 80%;
+    & a {
+        text-decoration: none;
+        border: solid 1px #AAE;
+    	color: #15B;
+        display: block;
+        float: left;
+        padding: 0.3em 0.5em;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    	min-width:1em;
+    	text-align:center;
+    }
+    & span {
+        display: block;
+        float: left;
+        padding: 0.3em 0.5em;
+        margin-right: 5px;
+    	margin-bottom: 5px;
+    	min-width:1em;
+    	text-align:center;
+    }
+    & .current {
+        background: #26B;
+        color: #fff;
+    	border: solid 1px #AAE;
+        &.prev, &.next{
+        	color:#999;
+        	border-color:#999;
+        	background:#fff;
+        }
+    }
+}
+.contactform{
+    margin-bottom: 15px;
+    & label{
+        margin: 5px 0;
+        font-weight: 400;
+    }
+}
+.dna-Partners{
+    background: @gray-lighter;
+    min-height: 200px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    & .logos{
+        text-align: center;
+        & img{
+            margin: 0 5px;
+        }
+    }
+}
+.dna-EventListing{
+    background: @gray-lighter;
+    font-size: 12px;
+    padding: 50px 0;
+    & .title{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    & .date{
+        font-size: 18px;   
+    }
+    & .dna-EventMargin{
+        .make-lg-column(4);
+        & .dna-EventCard{
+            
+            text-align: center;
+            & .dna-Social {
+                height: 30px;
+                width: 30px;
+                background: black;
+                color: white;
+                position: relative;
+                display: inline-block;
+                .border-left-radius(50%);
+                .border-right-radius(50%);
+                text-decoration: none;
+                padding: 5px 0 0 1px;
+                text-align: center;
+                margin: 5px 0 5px 5px;
+                font-size: 15px;
+                &:hover{
+                    background: @brand-primary; 
+                }
+                & a{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            .website{
+                display: block;
+                margin: 5px 0;
+                font-weight: 300;
+                font-size: 14px;
+                .text-overflow();
+                & a {
+                    color: black;
+                }
+            }
+        }
+    }
+}
+.dna-Footer{
+    background: black;
+    min-height: 150px;
+    padding: 15px 0;
+    color: white;
+    .box-shadow(0 1000px 0 1000px black);
+    & .copyright{
+        font-size: 11px;
+        text-align: center;
+    }
+    & .footer-nav{
+        color: white;
+        text-transform: uppercase;
+        font-weight: 600;
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        & li{
+            height: 26px;
+            & a{
+                color: white;
+                &:hover{
+                    color: @navbar-default-bg;
+                    text-decoration: none;
+                }
+                & i{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}
+
+/* MailChimp Form Embed Code - Slim - 08/17/2011 */
+#mc_embed_signup{
+    //& form {display: block; position: relative; text-align: left; padding: 10px 0 10px 3%}
+    & h2 {font-weight: bold; padding: 0; margin: 15px 0; font-size: 1.4em;}
+    & input {
+        //border: 1px solid #999; 
+        -webkit-appearance: none;
+         //&.email {display: block; padding: 8px 0; margin: 0 4% 10px 0; text-indent: 5px; width: 58%; min-width: 130px;}
+         //&.button {display: block; width: 35%; margin: 0 0 10px 0; min-width: 90px;}
+    }
+    & input[type=checkbox]{-webkit-appearance: checkbox;}
+    & input[type=radio]{-webkit-appearance: radio;}
+    //& input:focus {border-color:#333;}
+    //& .button {clear: both; background-color: #aaa; border: 0 none; border-radius: 4px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size: 15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;
+        //&:hover {background-color:#777;}
+    //}
+    & .small-meta {font-size: 11px;}
+    & .nowrap {white-space: nowrap;}     
+    & .clear {clear: none; display: inline;}
+    & label {
+        display: block; 
+        font-size: 16px; 
+        padding-bottom: 10px; 
+        font-weight: bold;
+        &.error {display: block; float: none; width: auto; margin-left: 1.05em; text-align: left; padding:.5em 0;}
+    }
+    & div#mce-responses {float: left; top: -1.4em; padding: 0em .5em 0em .5em; overflow: hidden; width: 90%;margin: 0 5%; clear: both;}
+    & div.response {margin: 1em 0; padding: 1em .5em .5em 0; font-weight: bold; float: left; top: -1.5em; z-index: 1; width: 80%;}
+    & #mce-error-response {display: none;}
+    & #mce-success-response {color:#529214; display: none;}}
+
+@import "mediaqueries.less";

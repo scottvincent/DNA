@@ -111,6 +111,6 @@ var public_spreadsheet_url = 'https://docs.google.com/spreadsheet/pub?key=0AikF9
 Tabletop.init( { key: public_spreadsheet_url,
  callback: showInfo,
  wanted: [ "Exhibitions", "Galleries" ],
- proxy: 'https://s3.amazonaws.com/DNADATA',
+ //proxy: 'https://s3.amazonaws.com/DNADATA',
  debug: false } );
 

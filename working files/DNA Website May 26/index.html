@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html><head>    
+<!-- Website Information -->
+    <title>DNA Artspace</title>
+    <meta name="author" content="Scott Vincent IES Group Inc. http://iesgroup.ca">
+    <meta name="description" content="DNA Artspace is a new addition to London's growing arts community. It is a space dedicated to the promotion of contemporary art through curated exhibitions, screenings, performance, artist talks and events." />
+    <meta name="keywords" content="DNA Artspace, art, London, Ontario, Canada, gallery, contemporary, contemporary art, Canadian, fine art, visual art, media, arts community, artist, southwestern Ontario, downtown London, unlab, lomaa, vibrafusionlab, culture, media, exhibitions, events" />
+
+<!-- Mobile Settings -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, target-densitydpi=medium-dpi, width=device-width" />
+    <meta name="apple-mobile-web-app-title" content="DNA Artspace ">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="msapplication-TileImage" content="ico/apple-touch-icon-144-precomposed.png"/>
+    <meta name="msapplication-TileColor" content="#000"/>
+
+<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+      <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <![endif]-->
+
+<!-- fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="ico/favicon.ico">
+
+<!-- Styles -->
+ 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet"> <!-- Font-awesome CDN Styles -->
+    <!--<link href="css/style.css" rel="stylesheet" media="screen"> Isotope Styles -->
+    <!--<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />  Photo Gallery Styles -->
+    <link href="css/styles.css" rel="stylesheet" media="screen">
+ 
+  </head>
+  
+  <style>
+  
+  .exposureTarget {width:600px; height:450px; background-color:#FFF;float:left;padding:0;margin:0;position:relative; margin-bottom:40px;}
+
+.exposureWrapper {position:absolute; top:0; left:0; }
+
+.exposureWrapper img {cursor:pointer;position:absolute;top:0px; left:0; width:600px; height:400px;}
+
+.exposureLoaded {background-image:none;}
+
+.captioncontainer {width:600px; height:60px; position:relative; top:440px;}
+.caption2 {font-size:12px; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-weight:200; font-style:normal;  color:#333; }
+
+.exposureControls span {padding-bottom:2px;}
+.exposureControls span,
+.exposureControls a {padding:0px;display:block;float:left;}
+
+.exposureControls a {color:#333;text-decoration:none;outline:none; font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+
+.exposureControls a:active,
+.exposureControls a:hover {color:#a3985c; background-color:#fff;}
+.exposurePrevPage, .exposurePaging, .total, .exposureNextPage { display:inline;}
+.total { float:left;}
+
+/* Paging # */
+.exbImgnav { width:80px; float:right; margin-top:4px; margin-right:0px; margin-bottom:2px; font-family:Arial, Helvetica, sans-serif; color:#333; font-size:0.9em;}
+.exbImgnav .exposurePrevPage { padding-top:3px; padding-right:5px; padding-left:8px; }
+.exbImgnav .exposureNextPage { padding-top:3px; padding-left:5px; }
+.exbImgnav img { vertical-align: middle;}
+.exbImgnav .exposurePaging .active {padding-right:5px;}
+
+.clear {
+	clear:both;	
+}
+  
+  </style>
+  
+  <body>
+
+<!-- Navbar --> 
+    <div class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+            <i class="icon-reorder icon-2x"></i>
+          </button>
+          <a class="navbar-brand" href="index.html"><img src="img/DNA-logo-full.svg" /></a>
+        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html"><span class="hidden-sm hidden-xs"><i class="icon-home icon-large"></i></span><span class="visible-sm visible-xs">home</span></a></li>
+            <li><a href="about.html">about us</a></li>
+            <li><a href="#events">exhibits/events</a></li>
+            <!--<li><a href="artists.html">artists</a></li>-->
+            <li><a href="news.html">news/blog</a></li>
+           	<li><a href="bookshop.html">bookshop</a></li>
+            <li><a href="contact.html">contact us</a></li>
+          </ul>
+          <div class="dna-Social pull-right">
+            <a href="http://www.facebook.com/DNAArtspace" target="_blank" class="btn btn-default">
+              <i class="icon-facebook icon-large hidden-sm hidden-xs"></i>
+              <span class="visible-sm visible-xs"><i class="icon-facebook icon-large"></i> Facebook</span>
+            </a>
+            <a href="https://twitter.com/DNAArtspace" target="_blank" class="btn btn-default">
+              <i class="icon-twitter icon-large hidden-sm hidden-xs"></i>
+              <span class="visible-sm visible-xs"><i class="icon-twitter icon-large"></i> Twitter</span>
+            </a>
+            
+              <a href="http://dnaartspace.tumblr.com" target="_blank" class="btn btn-default">
+              <i class="icon-tumblr icon-large hidden-sm hidden-xs"></i>
+              <span class="visible-sm visible-xs"><i class="icon-tumblr icon-large"></i> Blog</span>
+            </a>
+          </div>
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+<!-- Hero Unit --> 
+  <div class="dna-SpaceImg">
+    <div class="container">
+      <div class="row" >
+        <div class="col col-lg-11 col-offset-1 dna-CurrentExpo">
+          <!--<span>Introducing</span><br>
+          <div>DNA Artspace</div>-->
+      
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Expo --> 
+  <div class="dna-EventExpo" >
+    <div class="container">
+      <div class="row" >
+        <div class="col col-lg-12">
+          <h1 class="heading" id="events">Exhibitions &amp; Events </h1>
+        </div>
+        <div class="col col-lg-12 dna-Expo" id="exhibition">
+          
+        <!--<div class="expoContain row"><div class="col col-lg-12 expoTitle"><span class="subtitle current">Current Exhibition:</span><br><div class="title">Sweet Magic London are on Display</div></div><div class="col col-lg-2 expoImg"><img src="https://lh6.googleusercontent.com/-udgqftpIMxE/UfkXXly_I5I/AAAAAAAAASs/uLP3631owmM/w340-h319-no/SMLlogo.jpg"></div><div class="col col-lg-10 expoInfo"><div class="date">Aug<span> 14</span> - Sep <span>27</span> @ <span>DNA Artspace</span></div><p>The first exhibition on display at DNA Artspace in downtown London, ON. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p><div class="expoSocial">Learn More:<div class="dna-Social"><a target="_blank" href="https://www.facebook.com/events/198530676864407/"><span class="icon-facebook icon-large"></span></a></div> <div class="dna-Social"><a target="_blank" href="http://www.youtube.com/dnaartspace"><span class="icon-youtube icon-large"></span></a></div> <span class="website"><a target="_blank" href="http://sweetmagiclondon.com">Visit Website</a></span></div></div></div>-->
+
+        <!--<div class="expoContain row"><div class="col col-md-12 expoTitle"><span class="subtitle">Upcoming Exhibition:</span><br><div class="title">Sweet Magic London are on Display</div></div><div class="col col-md-2 expoImg"><img src="https://lh6.googleusercontent.com/-udgqftpIMxE/UfkXXly_I5I/AAAAAAAAASs/uLP3631owmM/w340-h319-no/SMLlogo.jpg"></div><div class="col col-md-10 expoInfo"><div class="date">Sep<span> 27</span> - Oct <span>31</span> @ <span>DNA Artspace</span></div><p>The first exhibition on display at DNA Artspace in downtown London, ON. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui</p><div class="expoSocial">Learn More:<div class="dna-Social"><a target="_blank" href="https://www.facebook.com/events/198530676864407/"><span class="icon-facebook icon-large"></span></a></div> <div class="dna-Social"><a target="_blank" href="http://www.youtube.com/dnaartspace"><span class="icon-youtube icon-large"></span></a></div> <span class="website"><a target="_blank" href="http://sweetmagiclondon.com">Visit Website</a></span></div></div></div>-->
+
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Events -->  
+    <div class="dna-EventListing" >
+ 
+          
+
+
+<div class="exhibitionmain">
+
+
+<h5></h5>
+
+<div class="exhibition_header"> UPCOMING EXHIBITIONS </div>
+
+<img src="img/skullAd_Final.jpg" width="600" height="400">
+
+<h5></h5>
+
+<div class="exhibition_header">  PAST EXHIBITIONS </div>
+
+
+<div id="wrapper">
+<div id="list">
+
+<div class="item"> 
+<div class="imageWrapper"><img src="img/Exhibitions_thumbnails/NoBoysWithFrogs_thumb.jpg" width="190" height="280">
+<br> <a href="javascript:" onclick="toggleVisibility('noboys');" class="exhibition_title"> No Boys With Frogs</a><div class="exhibition_text"> November 29 to December 15, 2013 <p></p>
+DNA Artspace is proud to present No Boys with Frogs, a site-specific project that showcases the work of thirty-six London, Ontario based artists</div>
+</div></div>
+
+<div class="item"> 
+<div class="imageWrapper"><img src="img/Exhibitions_thumbnails/SweetMagic_thumb.jpg" width="190" height="280">
+<br> <div class="exhibition_title">Sweet Magic</div> <div class="exhibition_text">
+September 20 to September 22, 2013 <p></p>Sweet Magic London is a multidisciplinary arts micro-festival happening in London, Ontario, Canada.</div>
+</div></div>
+
+
+</div>
+</div>
+
+
+
+<div id="noboys" class="content"> 
+                
+<h5></h5>
+
+<img src="img/NoBoysWithFrogs/NoBoysWithFrogs.jpg">
+
+<p></p>
+<div> 
+<p class="exhibittext">
+DNA Artspace is a new addition to London's growing art community. Owners and directors Allison and Damir Matic are passionate about contemporary art and developing a cutting edge exhibition space. Preferring the term 'artspace' over 'gallery,' their vision is to provide a welcoming environment that encourages the public to engage with, question, and discuss contemporary art. With an innovative approach to sustaining London's creative culture, DNA Artspace aims to support the city's vibrant emerging generation of artists and provide a broader awareness of London's established artists. Located at 123 Dundas, DNA Artspace will be renovated this winter and will officially open to the public in the spring of 2014.
+
+</p>
+<p class="exhibittext">
+123 Dundas was originally built to house a shoe store and factory for Fodemesi Shoes, a family owned and operated orthopaedic specialist. As an opportunity to conceptually react to the transition of the building from a shoe factory to a creative space, Allison and Damir have decided to mark this turning point with a site-specific project, No Boys with Frogs. For this exhibition, a selection of artists at various stages in their career have been invited to claim an area in the building and create work that responds to the space in an open format. With a two month install period, artists have been making work that either responds to the interior architecture, comments on the history of the building, or utilizes the project and space as an opportunity to test methods and material processes that would not normally occur in their practice. When renovations commence in mid December, all the work will either be removed or destroyed.
+</p>
+<p class="exhibittext">
+The interior of the building has a rich variety of qualities for artists to respond to. In its current shell of a shoe store and factory, 123 Dundas is full of curiosities: Although built in the 1980s, it was decorated with a fondness for 1970s brown and orange; main floor walls jut out at varied angles; carpeted areas exist in unconventional spaces; there is a room solely designed to inhabit a stock of leather; thick layers of plaster dust cover multiple custom built shelves; faux textile patterned wallpaper seems to be peel off on its own; and the removal of display shelving has revealed hidden patterns of glue reminiscent of the most exquisite drawing gestures. 
+</p>
+<p class="exhibittext">
+The title, No Boys with Frogs stems from a visit to the 2013 Venice Biennale. While viewing Shary Boyle's exhibition in the Canadian pavilion Allison and Damir noticed a comment in the guest book that read: "Love the work but where is boy with frog [sic]?" This humorous statement refers to Canadian artist Paul Peel and his painting of a boy observing a frog, The Young Biologist. The painting is housed in the Canadian Collection of the Art Gallery of Ontario, and is often deemed a highlight by visitors. Considering the notoriety of this work plus the comment in Boyle's guest book, it appears that this painting is linked to what international audiences might associate with Canadian art. Coincidently, Paul Peel is closely connected with London, Ontario, his hometown. Operating as a response to the question in the guest book, No Boys with Frogs could be read as: "(There are) No Boys with Frogs (here)" — a playful critique of the misconception of Paul Peel as London's only famous artist. Which ever way the title is understood, this is an exciting exhibition that foregrounds contemporary art in London and celebrates the non-traditional kind of work one can expect to experience at DNA Artspace. 
+</p>
+<p class="exhibittext">
+No Boys with Frogs runs from November 29th to December 15th 2013. A detailed schedule for the opening reception plus gallery hours will be posted on the website. DNA Artspace would like to specially thank all the participating artists for their support and for generously volunteering their time to this project. 
+</p>
+<p class="exhibittext">
+List of Artists / Collaborators / Art Organizations:
+</p>
+<p class="exhibittext">
+David Bobier &middot; Dickson Bou &middot; Parker Branch &middot; Kyla Brown &middot; Heather Carey &middot; Gillian Dykeman &middot; Liza Eurich &middot; Wyn Geleynse &middot; Patrick Howlett &middot; Brad Isaacs &middot; Kelly Jazvac &middot; James Kirkpatrick &middot; Neil Klassen &middot; Maryse Larivi&#232;re &middot; Peter Lebel &middot; LOMAA &middot; Mackenzie Ludlow &middot; Darrin MacAdam &middot; Patrick Mahon &middot; Damir Matic &middot; Jason McLean &middot; David Merritt &middot; Colin Miner &middot; Laura Mitrow &middot; Kim Moodie &middot; Tegan Moore &middot; Chris Myhr &middot; Kelly O'dette &middot; Troy David Ouellette &middot; Dianne Pearce &middot; Jenna Faye Powell &middot; Jamie Q &middot; Giles Whitaker &middot; Kelly Wood &middot; Thea Yabut &middot; Billy Bert Young</p>
+</div>
+
+
+<h5></h5>
+  <div class="exbImgnav">&nbsp;</div> 
+  <ul id="images"> 
+  
+  
+    <li><a href="img/NoBoysWithFrogs/IMG_001.jpg" width="600" height="400"></a>
+   <div class="caption2"> Kim Moodie, <em>Desire,</em> main floor installation view</div>
+    </li>
+    
+     <li><a href="img/NoBoysWithFrogs/IMG_002.jpg" width="600" height="400"></a>
+      <div class="caption2">Thea Yabut, <em>folding the rip</em></div>
+     </li>
+      <li><a href="img/NoBoysWithFrogs/IMG_003.jpg" width="600" height="400"></a>
+      <div class="caption2">Neil Klassen, <em>untitled</em></div>
+      </li>
+       <li><a href="img/NoBoysWithFrogs/IMG_004.jpg" width="600" height="400"></a>
+      <div class="caption2"> Patrick Howlett, <em>empty shelves</em></div>
+       </li>
+        <li><a href="img/NoBoysWithFrogs/IMG_005.jpg" width="600" height="400"></a>
+       <div class="caption2"> Billy Bert Young, <em>Nostalgia Is So</em></div>
+        </li>
+         <li><a href="img/NoBoysWithFrogs/IMG_006.jpg" width="600" height="400"></a>
+        <div class="caption2"> Parker Branch, <em>b&#250;r</em></div>
+         </li>
+          <li><a href="img/NoBoysWithFrogs/IMG_007.jpg" width="600" height="400"></a>
+          <div class="caption2">Gillian Dykeman, <em>Human Resources Inc</em></div>
+          </li>
+           <li><a href="img/NoBoysWithFrogs/IMG_008.jpg" width="600" height="400"></a>
+          <div class="caption2"> Tegan Moore, <em>cracked cracked ice with relative visibility</em></div>
+           </li>
+     </ul>	
+		 <div class="captioncontainer"></div>
+			<div class="clear"></div>
+     
+
+     
+     
+</div>
+
+
+
+</div>
+
+                
+                 
+
+                
+                
+                
+                
+                
+                
+                
+              
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+
+
+
+
+<!-- Footer --> 
+    <div class="dna-Footer">
+      <div class="container">
+        <div class="row">
+          
+          <div class="col col-lg-3 col-sm-12 col-xs-12"  style="padding-left:80px;">
+            <img src="img/DNA-logo-white.svg" width="150" />
+          </div>
+          
+          <div class="col col-lg-3 col-sm-4 col-xs-6">
+            <ul class="footer-nav">
+              <li><a href="index.html">home</a></li>
+              <li><a href="about.html">about us</a></li>
+              <li><a href="#events">exhibits/events</a></li>
+              <!--<li><a href="artists.html">artists</a></li>-->
+              <li><a href="news.html">news/blog</a></li>
+			  <li><a href="bookshop.html">bookshop</a></li>
+              <li><a href="contact.html">contact us</a></li>
+            </ul>
+          </div>
+          
+          <div class="col col-lg-3 col-sm-4 col-xs-6" style="margin-left:-68px;">
+              <a href="http://dnaartspace.tumblr.com/" target="_blank" class="footer-nav"><i class="icon-tumblr icon-large"></i> Blog</a>&nbsp; / &nbsp;
+              <a href="http://www.facebook.com/DNAArtspace" target="_blank" class="footer-nav"><i class="icon-facebook icon-large"></i> Like</a>&nbsp; / &nbsp;
+              <a href="https://twitter.com/DNAArtspace" target="_blank" class="footer-nav"><i class="icon-twitter icon-large"></i> Follow</a>
+            
+            <p>
+            
+              <address>
+              <strong>Hours of Operation</strong><br>
+              Sunday and Monday: Closed <br/>
+Tuesday and Thursday: 11am to 5pm <br/>
+Friday: 11am to 6pm <br/>
+Saturday: 12pm to 5pm <br/>
+            </address>
+            </p>
+          </div>
+          
+          <div class="col col-lg-3 col-sm-4 col-xs-6">
+            <address>
+              123 Dundas St<br>
+              London, ON N6A 1E8<br>
+              <!--<abbr title="Phone">P:</abbr> (123) 456-7890-->
+            </address>
+			 <address>
+              <a href="mailto:#">info@dnaartspace.com</a>
+            </address>
+            
+               &copy; 2014 DNA Artspace. Site by <a href="http://www.iesgroup.ca">IES Group Inc.</a>
+          </div>
+        </div>
+        
+     
+        </div>
+      </div>
+    </div>
+
+<!-- Site Wide Scripts -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+
+<!-- Home Page Specific Scripts -->
+    <script type="text/javascript" src="js/homepage.js"></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>  
+    <script type="text/javascript" src="js/jquery.tumblr.js"></script> 
+    
+    
+    <!-- Exhibition Page Specific Scripts -->    
+    <script type="text/javascript" src="js/jquery.exposure.js"> </script>
+    <script type="text/javascript" src="js/jquery.exposure.settings.js"> </script>
+    <script type="text/javascript" src="js/masonary.js"></script>
+    <script type="text/javascript" src="js/masonary_settings.js"></script>
+    <script type="text/javascript" src="js/exhibition_toggle.js"></script>
+
+<!-- Artists Page Specific Scripts
+    <script type="text/javascript" src="js/tabletop.js"></script>
+    <script type="text/javascript" src="js/jquery.isotope.min.js"></script>
+    <script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+    <script type="text/javascript" src="js/artists.js"></script>-->
+
+<!-- Optionally enable responsive features in IE8 -->
+    <script type="text/javascript" src="js/respond.min.js"></script>
+    <script type="text/javascript" src="js/svgeezy.min.js"></script>
+  </body>
+</html>
